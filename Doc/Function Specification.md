@@ -37,7 +37,7 @@ Thirdly, PISA has special designs for student scores. PISA datasets include sets
 
 A metadata of PISA student variable names is shown in the following: 
 
-![Screen%20Shot%202018-11-08%20at%2012.25.03%20AM.png](attachment:Screen%20Shot%202018-11-08%20at%2012.25.03%20AM.png)
+![codebook%20snap.png](attachment:codebook%20snap.png)
 
 ## User cases
 
