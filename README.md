@@ -3,7 +3,7 @@ PISAnalysisTool
 ================
 
 
-PISAnalysisTool is a great source of reference for conducting multi-level modeling in large-scale educational assessment such as PISA (The Programme for International Student Assessment). It provides examplar analysis for conducting quantitative educational inquiry from data cleaning to model summary visualization. This package uses `pymer4` for modeling in python, which is equivalent to `lmer` package in R. Users can use this package to estimate other interesting variables in the dataset to perform fixed effect, random effect, and mixed effect multi-level modeling.
+PISAnalysisTool is a great source of reference for conducting multi-level modeling in large-scale educational assessment such as PISA (The Programme for International Student Assessment). It provides examplar analysis for conducting quantitative educational inquiry from data cleaning to model summary visualization. This package uses `pymer4` library for modeling in python, which is equivalent to `lmer` package in R. Users can use this package to estimate other interesting variables in the dataset to perform fixed effect, random effect, and mixed effect multi-level modeling.
 * Currently for modeling, a selection of variables in PISA 2015 are used in functions. In the future, we can extend them to more generic functions to facilitate data analysis of large-scale educational assessment data.
 
 ## PISA and World Bank Educational Data
