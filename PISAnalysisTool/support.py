@@ -60,7 +60,9 @@ def school2nation(id):
         return id // 100000 * 10000
     if id < 97200000:
         return 7240000
-    return 8400000
+    if id < 97400000:
+        return 8400000
+    return 320100
 
 def student2nation(id):
     '''
@@ -73,7 +75,7 @@ def info(df, id):
     '''
     :param df: the dataframe of 'nations.csv'
     :param id: the id of nation
-    :return: a tuple - (string country name, string continent)
+    :return: a tuple - (string country name, string country code, string continent)
     '''
     try:
         target = df[df['nationID'] == id]
@@ -82,27 +84,30 @@ def info(df, id):
         raise KeyError()
 
     name = target['nationName'].tolist()
+    code = target.nationCode.tolist()
     continent = target.continent.tolist()
 
-    return (name[0],continent[0])
+    return (name[0], code[0], continent[0])
 
 
 def infos(country_df, id_list):
     '''
     :param country_df: the dataframe of 'nations.csv'
     :param id_df: the dataframe of country id
-    :return: a dataframe - (string country name, string continent)
+    :return: a dataframe - (string country name, string country code, string continent)
     '''
 
     name_list = []
     continent_list = []
+    code_list = []
 
     for i in range(len(id_list)):
         t = info(country_df, id_list[i])
         name_list.append(t[0])
-        continent_list.append(t[1])
+        code_list.append(t[1])
+        continent_list.append(t[2])
 
-    dict = {'CountryName':name_list, 'Continent':continent_list}
+    dict = {'CountryName':name_list, 'CountryCode': code_list, 'Continent':continent_list}
     res = pd.DataFrame(dict)
 
     return res
