@@ -119,3 +119,9 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+#.DS_Store
+.DS_Store
+
+# notebook checkpoints
+.ipynb_checkpoints
