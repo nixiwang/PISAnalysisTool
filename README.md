@@ -12,15 +12,50 @@ Equity is a fundamental value and guiding principle for education policies, but 
 
 ```bash
 │   .DS_Store
+│   .gitignore
+│   CHANGES.txt
+│   LICENSE.md
 │   README.md
+│   requirements.txt
 │
-└───Doc
+├───Data_
+│       .DS_Store
+│       sample data.csv
+│       student_info.csv
+│
+├───Doc
+│   │   .DS_Store
+│   │   codebook_snap.png
+│   │   Component Specification.md
+│   │   Function Specification.md
+│   │   Technology Review.pdf
+│   │
+│   └───.ipynb_checkpoints
+│           Function Specification-checkpoint.ipynb
+│
+├───Examples
+│       .DS_Store
+│       demo WB data.ipynb
+│       get_student_info.ipynb
+│
+└───PISAnalysisTool
     │   .DS_Store
-    │   codebook_snap.png
-    │   Component Specification.md
-    │   Function Specification.md
-    │   Technology Review.pdf
+    │   correlation.py
+    │   data_cleaning.py
+    │   get_WDI_data.py
+    │   hlm_pymer4.py
+    │   merge_csv.py
+    │   plot_WDI.py
+    │   students.py
+    │   support.py
+    │   version.py
+    │   __init__.py
     │
-    └───.ipynb_checkpoints
-            Function Specification-checkpoint.ipynb
-```bash
+    └───tests
+            sample.sav
+            test_correlation.py
+            test_data_cleaning.py
+            test_hlm_pymer4.py
+            test_support.py
+            __init__.py
+```
