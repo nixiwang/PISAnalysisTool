@@ -91,4 +91,4 @@ widgetsnbextension==3.4.2
 wrapt==1.10.11
 zope.interface==4.5.0
 savReaderWriter==3.4.2
-folium=0.7.0
+folium==0.7.0
