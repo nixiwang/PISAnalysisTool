@@ -223,6 +223,9 @@ csv data file for PISA data, including a demo on interactive PISA data generatio
 - A demo on interactive model formula generation, for users to create model on their own 
 - Creating visualizations with the merged dataset on this example
 
+## Visualization
+![Image1](https://github.com/nixiwang/PISAnalysisTool/blob/master/Examples/Female_avg_score_country.PNG)
+
 ## Limitations
 In its current form, the PISAnalysisTool package serves as a very efficient data scraping and examplar analysis 
 tool, but not with customizable model building, though the users can import and call `Lmer` models directly
