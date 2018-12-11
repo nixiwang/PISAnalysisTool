@@ -1,7 +1,14 @@
+"""
+CSE583 Project
+According to user's input for lmer, creates a formular and
+its name
+"""
+
 def formula_creator():
-    '''
-    Creates a fomular based on user's input for Lmer, and a name describing the fomular.
-    '''
+    """
+    Creates a formular based on user's input for Lmer, 
+    and a name describing the formular.
+    """
     outcome = input('Input outcome value:')
     print()
 
@@ -93,7 +100,10 @@ def formula_creator():
     return res, name
 
 def main():
-    f, n = formula_creator()
+    """
+    Generates the formular specified by the user
+    """
+    f, n = formular_creator()
     print(f)
     print(n)
 

@@ -1,16 +1,16 @@
-'''
+"""
 CSE583 Project
 get_student_info helper functions
-'''
+"""
 
 import os
 import pandas as pd
 import savReaderWriter as spss
 
 def sav_to_dataframe(file):
-    '''
+    """
     Converts a sav file to a pandas dataframe
-    '''
+    """
     if not os.path.isfile(file):
         print('File not exists!')
         raise FileNotFoundError()
@@ -30,17 +30,17 @@ def sav_to_dataframe(file):
 
 
 def student2school(df, id_num):
-    '''
+    """
     Takes the 'IDs_sorted_by_student.csv' dataframe
     and student id, returns school id of the student.
-    '''
+    """
     return student2school_helper(df, id_num, 0, len(df))
 
 
 def student2school_helper(df, id_num, start, end):
-    '''
+    """
     student2school's helper function
-    '''
+    """
     if start > end:
         print('Student ID:' + id_num + ' not exists!')
         raise KeyError()
@@ -59,9 +59,9 @@ def student2school_helper(df, id_num, start, end):
 
 
 def school2nation(id_num):
-    '''
+    """
     Takes school id, returns nation id of the school.
-    '''
+    """
     if id_num < 97100000:
         return id_num // 100000 * 10000
     if id_num < 97200000:
@@ -72,19 +72,19 @@ def school2nation(id_num):
 
 
 def student2nation(id_num):
-    '''
+    """
     Takes student id, returns nation id of the student.
-    '''
+    """
     return school2nation(id_num)
 
 
 def info(df, id_num):
-    '''
+    """
     :param df: the dataframe of 'nations.csv'
     :param id: the id of nation
     :return: a tuple - (string country name, string country
     code, string continent)
-    '''
+    """
     try:
         target = df[df['nationID'] == id_num]
     except KeyError:
@@ -99,12 +99,12 @@ def info(df, id_num):
 
 
 def infos(country_df, id_list):
-    '''
+    """
     :param country_df: the dataframe of 'nations.csv'
     :param id_df: the dataframe of country id
     :return: a dataframe - (string country name, string
     country code, string continent)
-    '''
+    """
 
     name_list = []
     continent_list = []
@@ -122,10 +122,10 @@ def infos(country_df, id_list):
     return res
 
 def extract_basic_df(df, country_dict_df):
-    '''
+    """
     Takes 2 dataframes df and country_dict_df, extract basic
     student information, returns a new dataframe
-    '''
+    """
     df1 = df[['CNTRYID', 'CNTSCHID', 'CNTSTUID', 'ST004D01T']]
     df1.columns = ['CountryID', 'SchoolID', 'StudentID', 'Gender']
     stuid_list = df1['StudentID'].tolist()
@@ -147,11 +147,11 @@ def extract_basic_df(df, country_dict_df):
 
 
 def interface(df):
-    '''
+    """
     Takes a dataframe as parameter, gets variable names
     and output file name, returns a list with the given
     variables
-    '''
+    """
     attributes_list = []
     print('Default attributes are: "IBTEACH", "WEALTH", '
           '"ESCS", "SC013Q01TA", "SCIERES"')

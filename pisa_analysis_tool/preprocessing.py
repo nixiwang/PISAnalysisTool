@@ -8,9 +8,9 @@ import os
 
 cwd = os.getcwd()
 
-file_dir = '../../data/student_info.csv'
+file_dir = '../data/student_info.csv'
 subject_lst = ['Mathematics', 'Reading', 'Science']
-geo_data = '../../data/world_ogr.json'
+geo_data = '../data/world_ogr.json'
 
 
 def preprocessing():

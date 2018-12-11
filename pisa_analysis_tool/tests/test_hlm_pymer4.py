@@ -7,7 +7,6 @@ from pisa_analysis_tool.hlm_pymer4 import *
 
 THIS_DIR = os.path.dirname(os.path.abspath(__file__))
 
-
 class UnitTests(unittest.TestCase):
     def test_hlm_m0(self):
         """Run on a much smaller random sample of 273 rows only because
