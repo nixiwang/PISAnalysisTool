@@ -1,4 +1,5 @@
 import unittest
+import pandas as pd
 import numpy as np
 import os
 from pisa_analysis_tool.hlm_pymer4 import random_intercept_3level_model
@@ -6,6 +7,7 @@ from pisa_analysis_tool.hlm_pymer4 import random_effect_2level_model
 from pisa_analysis_tool.hlm_pymer4 import fixeff_interaction_3level_model
 from pisa_analysis_tool.hlm_pymer4 import fixed_effect_3level_model
 from pisa_analysis_tool.hlm_pymer4 import mixeff_multinteraction2level_model
+from pisa_analysis_tool.hlm_pymer4 import mixeff_interaction_3level_model
 
 THIS_DIR = os.path.dirname(os.path.abspath(__file__))
 

@@ -1,6 +1,11 @@
 import unittest
 import pandas as pd
-from pisa_analysis_tool.students_info_helper import *
+import os
+from pisa_analysis_tool.students_info_helper import sav_to_dataframe
+from pisa_analysis_tool.students_info_helper import student2nation
+from pisa_analysis_tool.students_info_helper import student2school
+from pisa_analysis_tool.students_info_helper import school2nation
+from pisa_analysis_tool.students_info_helper import info
 
 THIS_DIR = os.path.dirname(os.path.abspath(__file__))
 
