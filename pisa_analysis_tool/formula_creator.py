@@ -7,7 +7,7 @@ its name
 
 def formula_creator():
     """
-    Creates a formular based on user's input for Lmer, 
+    Creates a formular based on user's input for Lmer,
     and a name describing the formular.
     """
     outcome = input('Input outcome value:')
