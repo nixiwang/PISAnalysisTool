@@ -224,7 +224,12 @@ csv data file for PISA data, including a demo on interactive PISA data generatio
 - Creating visualizations with the merged dataset on this example
 
 ## Visualization
+Figure 1: PISA Score World Distribution
 ![Image1](https://github.com/nixiwang/PISAnalysisTool/blob/master/Examples/Female_avg_score_country.PNG)
+Figure 2: World Bank Gender Parity Indicator Distribution
+![Image1](https://github.com/nixiwang/PISAnalysisTool/blob/master/Examples/gender_coeff.PNG)
+Figure 3: Average Scores Comparison for Male and Female Students
+![Image1](https://github.com/nixiwang/PISAnalysisTool/blob/master/Examples/male%20and%20female%20score%20difference.PNG)
 
 ## Limitations
 In its current form, the PISAnalysisTool package serves as a very efficient data scraping and examplar analysis 
