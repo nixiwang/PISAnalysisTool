@@ -2,6 +2,8 @@
 # function above WB_country_data to
 # get a list of indicators for each country,then plot a line diagram
 
+from get_WDI_data import country_data
+
 
 def plot_indicators(country_list, indicator, start=2000, end=2015):
     import matplotlib.pyplot as plt
@@ -14,7 +16,7 @@ def plot_indicators(country_list, indicator, start=2000, end=2015):
     # now take entire text from first letter to before opening bracket
     title = title[:title.find('(')-1]
     # this is the patter to match anything between two brackets
-    p = re.compile('\((.*?)\)')
+    p = re.compile('\\((.*?)\\)')
     ylab = p.findall(ind[0]['name'])[0]
     sns.set_style('white')
     fig, axis = plt.subplots()

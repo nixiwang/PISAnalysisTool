@@ -102,7 +102,8 @@ def main():
      to be used for modeling
 
         :param df: a data frame with student ID, school ID, country ID,
-        science, math, reading, and other five selected variables as predictors.
+        science, math, reading, and other five selected variables as
+        predictors.
         :return: two csv files, one with complete data, one with subsetted data
     """
     # df = pd.read_csv("data/student_info.csv", encoding='latin-1',

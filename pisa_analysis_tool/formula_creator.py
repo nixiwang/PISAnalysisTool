@@ -105,7 +105,7 @@ def main():
     """
     Generates the formular specified by the user
     """
-    f, n = formular_creator()
+    f, n = formula_creator()
     print(f)
     print(n)
 

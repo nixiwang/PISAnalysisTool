@@ -31,7 +31,8 @@ def random_intercept_3level_model(dataframe):
     scores as random.
 
         :param dataframe: a data frame with student ID, school ID, country ID,
-        science, math, reading, and other five selected variables as predictors.
+        science, math, reading, and other five selected variables as
+        predictors.
         :return: the model results
     """
     # Random Intercept-only three-level model
@@ -62,7 +63,8 @@ def random_effect_2level_model(dataframe):
     random on country level.
 
         :param dataframe: a data frame with student ID, school ID, country ID,
-        science, math, reading, and other five selected variables as predictors.
+        science, math, reading, and other five selected variables as
+        predictors.
         :return: the model results
     """
     # Random intercept and slope two-level model:
@@ -98,7 +100,8 @@ def fixed_effect_3level_model(dataframe):
     Multi-level model_2_sci includes intercept, variables as fixed effect.
 
         :param dataframe: a data frame with student ID, school ID, country ID,
-        science, math, reading, and other five selected variables as predictors.
+        science, math, reading, and other five selected variables as
+        predictors.
         :return: the model results
     """
     # Fixed effects three-level model
@@ -133,7 +136,8 @@ def fixeff_interaction_3level_model(dataframe):
     interaction term.
 
         :param dataframe: a data frame with student ID, school ID, country ID,
-        science, math, reading, and other five selected variables as predictors.
+        science, math, reading, and other five selected variables as
+        predictors.
         :return: the model results
     """
     # Fixed effects plus interaction three-level model
@@ -170,7 +174,8 @@ def mixeff_interaction_3level_model(dataframe):
      interaction.
 
         :param dataframe: a data frame with student ID, school ID, country ID,
-        science, math, reading, and other five selected variables as predictors.
+        science, math, reading, and other five selected variables as
+        predictors.
         :return: the model results
     """
     # Mixed effects plus interaction three-level model
@@ -208,12 +213,14 @@ def mixeff_multinteraction2level_model(dataframe):
      and setting ESCS as random on country level.
 
         :param dataframe: a data frame with student ID, school ID, country ID,
-        science, math, reading, and other five selected variables as predictors.
+        science, math, reading, and other five selected variables as
+        predictors.
         :return: the model results
     """
     # one random effect and multiple interactions between gender and factors
     model_5_sci = Lmer(
-        'log_science ~ IBTEACH + WEALTH + ESCS + female + Sch_science_resource '
+        'log_science ~ IBTEACH + WEALTH + ESCS + female + '
+        'Sch_science_resource '
         '+ female*ESCS '
         '+ female*WEALTH + female*IBTEACH + (ESCS | CountryID)',
         data=dataframe)

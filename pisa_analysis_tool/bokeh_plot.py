@@ -57,8 +57,9 @@ def sort_by_country_avg(df_count, subject, m_res, f_res):
     :return: 3 dictionaries
     """
     df_ctry_subj = df_count[['CountryName', subject]]
-    df_ctry_subj_avg_sorted = df_ctry_subj.sort_values(df_ctry_subj.columns[-1],
-                                                       ascending=False)
+    df_ctry_subj_avg_sorted = df_ctry_subj.sort_values(
+        df_ctry_subj.columns[-1],
+        ascending=False)
     ctry_subj_avg_lst = df_ctry_subj_avg_sorted.to_dict('split')['data']
     lst_25 = []
     lst_25_male = []
@@ -222,7 +223,8 @@ def combine_figures(math_res, male_math_res, female_math_res,
                     sci_res, male_sci_res, female_sci_res):
     """
     Combine the plot in one html.
-    :param math_res: a dictionary with mean math gender coefficient for each bin
+    :param math_res: a dictionary with mean math gender coefficient for each
+    bin
     :param male_math_res: a dictionary with mean male math score for each bin
     :param female_math_res: a dictionary with mean female math score for each
     bin
@@ -230,7 +232,8 @@ def combine_figures(math_res, male_math_res, female_math_res,
     bin
     :param male_read_res: a dictionary with mean male reading score for each
     bin
-    :param female_read_res: a dictionary with mean female reading score for each
+    :param female_read_res: a dictionary with mean female reading score for
+    each
     bin
     :param sci_res: a dictionary with mean science gender coefficient for each
     bin
