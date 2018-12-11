@@ -95,7 +95,6 @@ setup(
       "tornado==5.1.1",
       "tqdm==4.28.1",
       "traitlets==4.3.2",
-      "Twisted==17.5.0",
       "typed-ast==1.1.0",
       "tzlocal==1.5.1",
       "urllib3==1.23",

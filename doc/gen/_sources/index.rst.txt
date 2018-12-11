@@ -10,8 +10,9 @@ Welcome to PISAnalysisTool's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-.. automodule:: PISAnalysisTool
+.. automodule:: pisa_analysis_tool
    :members:
+   :undoc-members:
 
 Indices and tables
 ==================

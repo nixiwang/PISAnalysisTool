@@ -2,8 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3afae93-c0ac-4f8a-8e37-54b20276728d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PISA-and-World-Bank-Educational-Data-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PISA-and-World-Bank-Educational-Data-Project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data /sample data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data /student_info.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Examples/get_student_info.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Examples/get_student_info.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PISAnalysisTool/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PISAnalysisTool/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PISAnalysisTool/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PISAnalysisTool/correlation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PISAnalysisTool/data_cleaning.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PISAnalysisTool/get_WDI_data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PISAnalysisTool/hlm_pymer4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PISAnalysisTool/merge_csv.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PISAnalysisTool/plot_WDI.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PISAnalysisTool/students.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PISAnalysisTool/support.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PISAnalysisTool/tests/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PISAnalysisTool/tests/sample.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PISAnalysisTool/tests/test_correlation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PISAnalysisTool/tests/test_data_cleaning.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PISAnalysisTool/tests/test_hlm_pymer4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PISAnalysisTool/tests/test_support.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PISAnalysisTool/version.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/gen/.doctrees/environment.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/doc/gen/.doctrees/environment.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/gen/.doctrees/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/doc/gen/.doctrees/index.doctree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/gen/_sources/index.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/doc/gen/_sources/index.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/gen/genindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/gen/genindex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/gen/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/gen/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/gen/objects.inv" beforeDir="false" afterPath="$PROJECT_DIR$/doc/gen/objects.inv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/gen/py-modindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/gen/py-modindex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/gen/searchindex.js" beforeDir="false" afterPath="$PROJECT_DIR$/doc/gen/searchindex.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/sphinx/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sphinx/index.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen_docs.sh" beforeDir="false" afterPath="$PROJECT_DIR$/gen_docs.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,39 +47,246 @@
     <session id="186316598">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="1" />
+          <entry key="csv" value="5" />
+          <entry key="html" value="2" />
+          <entry key="ipynb" value="3" />
+          <entry key="md" value="1" />
+          <entry key="py" value="69" />
+          <entry key="rst" value="4" />
+          <entry key="sh" value="1" />
+          <entry key="txt" value="2" />
+          <entry key="yml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="1" />
+          <entry key="Bash" value="1" />
+          <entry key="HTML" value="2" />
+          <entry key="IPNB" value="3" />
+          <entry key="Markdown" value="1" />
+          <entry key="PLAIN_TEXT" value="7" />
+          <entry key="Python" value="69" />
+          <entry key="ReST" value="4" />
+          <entry key="YAML" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="4254" />
+          <entry key="rst" value="11" />
+          <entry key="sh" value="28" />
+          <entry key="txt" value="2" />
+          <entry key="yml" value="23" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Bash" value="28" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="Python" value="4254" />
+          <entry key="ReST" value="11" />
+          <entry key="YAML" value="23" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PISAnalysisTool/hlm_pymer4.py">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/correlation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1557" />
+            <state relative-caret-position="85">
+              <caret line="16" column="25" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="25" />
+              <folding>
+                <element signature="e#244#275#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/bokeh_plot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="41" column="6" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/tests/test_students_info_helper.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/students_info_helper.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="748">
+              <caret line="34" column="53" lean-forward="true" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
+              <folding>
+                <element signature="e#58#67#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/tests/test_preprocessing.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-186">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/tests/test_data_cleaning.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="29" column="60" lean-forward="true" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="60" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/get_WDI_data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="59" column="4" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/formula_creator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/get_students_info.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/merge_csv.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+            </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jupyter Notebook" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>..</find>
+      <find>():</find>
+      <find>artist</find>
+      <find>`</find>
+      <find>twisted</find>
+      <find>Twisted==17.5.0</find>
+      <find>mstpl</find>
+      <find>School_type1</find>
+      <find>School_type</find>
+      <find>data_cleaning</find>
+      <find>SC013Q01TA</find>
+      <find>IBTEACH</find>
+      <find>Student_types</find>
+      <find>SCIERES</find>
+      <find>'''</find>
+      <find>pymer4</find>
+      <find>'data</find>
+      <find>model_0_sci</find>
+      <find>model_1_sci</find>
+      <find>file_dir</find>
+      <find>sav_to_dataframe</find>
+      <find>spss</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>(self):</replace>
+      <replace>&quot;&quot;&quot;</replace>
+      <replace>model_1_sci</replace>
+      <replace>model_2_sci</replace>
+      <replace>model_3_sci</replace>
+      <replace>model_4_sci</replace>
+      <replace>model_5_sci</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/pisa_analysis_tool/tests/_trial_temp</dir>
+      <dir>$PROJECT_DIR$/</dir>
+    </dirStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/pisanalysistool/hlm_pymer4.py" />
+        <option value="$PROJECT_DIR$/temp.py" />
+        <option value="$PROJECT_DIR$/pisa_analysis_tool/merge_csv.py" />
+        <option value="$PROJECT_DIR$/pisa_analysis_tool/get_students_info.py" />
+        <option value="$PROJECT_DIR$/pisa_analysis_tool/get_WDI_data.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/pisa_analysis_tool/tests/test_correlation.py" />
+        <option value="$PROJECT_DIR$/doc/sphinx/index.rst" />
+        <option value="$PROJECT_DIR$/gen_docs.sh" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/pisa_analysis_tool/tests/test_preprocessing.py" />
+        <option value="$PROJECT_DIR$/pisa_analysis_tool/correlation.py" />
+        <option value="$PROJECT_DIR$/pisa_analysis_tool/data_cleaning.py" />
+        <option value="$PROJECT_DIR$/pisa_analysis_tool/temp.ipynb" />
+        <option value="$PROJECT_DIR$/pisa_analysis_tool/hlm_pymer4.py" />
+        <option value="$PROJECT_DIR$/pisa_analysis_tool/temp.py" />
+        <option value="$PROJECT_DIR$/pisa_analysis_tool/tests/test_hlm_pymer4.py" />
+        <option value="$PROJECT_DIR$/pisa_analysis_tool/tests/test_data_cleaning.py" />
+        <option value="$PROJECT_DIR$/pisa_analysis_tool/tests/test_students_info_helper.py" />
+        <option value="$PROJECT_DIR$/pisa_analysis_tool/students_info_helper.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="563" />
+    <option name="width" value="1618" />
+    <option name="height" value="836" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -65,7 +304,24 @@
             <path>
               <item name="PISA-and-World-Bank-Educational-Data-Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="PISA-and-World-Bank-Educational-Data-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="PISAnalysisTool" type="462c0819:PsiDirectoryNode" />
+              <item name="doc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PISA-and-World-Bank-Educational-Data-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PISA-and-World-Bank-Educational-Data-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="pisa_analysis_tool" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PISA-and-World-Bank-Educational-Data-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PISA-and-World-Bank-Educational-Data-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="pisa_analysis_tool" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PISA-and-World-Bank-Educational-Data-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PISA-and-World-Bank-Educational-Data-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="pisa_analysis_tool" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -74,7 +330,12 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -87,6 +348,117 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="Python tests.pytest in test_students_info_helper.py">
+    <configuration name="PISA-and-World-Bank-Educational-Data-Project" type="JupiterNotebook" factoryName="Jupyter Notebook">
+      <module name="PISA-and-World-Bank-Educational-Data-Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="additionalOptions" value="" />
+      <option name="ipnbHost" value="127.0.0.1" />
+      <option name="ipnbPort" value="8888" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_data_cleaning.UnitTests.test_valid_school_type" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="PISA-and-World-Bank-Educational-Data-Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pisa_analysis_tool/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_data_cleaning.UnitTests.test_valid_school_type&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_hlm_pymer4.UnitTests.test_hlm_m4" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="PISA-and-World-Bank-Educational-Data-Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pisa_analysis_tool/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_hlm_pymer4.UnitTests.test_hlm_m4&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_hlm_pymer4.UnitTests.test_hlm_m5" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="PISA-and-World-Bank-Educational-Data-Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pisa_analysis_tool/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_hlm_pymer4.UnitTests.test_hlm_m5&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in test_data_cleaning.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="PISA-and-World-Bank-Educational-Data-Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pisa_analysis_tool/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/pisa_analysis_tool/tests/test_data_cleaning.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in test_students_info_helper.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="PISA-and-World-Bank-Educational-Data-Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pisa_analysis_tool/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/pisa_analysis_tool/tests/test_students_info_helper.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Jupyter Notebook.PISA-and-World-Bank-Educational-Data-Project" />
+      <item itemvalue="Python tests.pytest for test_hlm_pymer4.UnitTests.test_hlm_m4" />
+      <item itemvalue="Python tests.pytest for test_hlm_pymer4.UnitTests.test_hlm_m5" />
+      <item itemvalue="Python tests.pytest for test_data_cleaning.UnitTests.test_valid_school_type" />
+      <item itemvalue="Python tests.pytest in test_data_cleaning.py" />
+      <item itemvalue="Python tests.pytest in test_students_info_helper.py" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.pytest in test_students_info_helper.py" />
+        <item itemvalue="Python tests.pytest in test_data_cleaning.py" />
+        <item itemvalue="Python tests.pytest for test_data_cleaning.UnitTests.test_valid_school_type" />
+        <item itemvalue="Python tests.pytest for test_hlm_pymer4.UnitTests.test_hlm_m5" />
+        <item itemvalue="Python tests.pytest for test_hlm_pymer4.UnitTests.test_hlm_m4" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -101,38 +473,426 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="pytest_in_test_hlm_pymer4_py - 2018.12.10 at 18h 29m 18s.xml">
+      <configuration name="pytest in test_hlm_pymer4.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_test_hlm_pymer4_UnitTests_test_hlm_m4 - 2018.12.10 at 18h 38m 27s.xml">
+      <configuration name="pytest for test_hlm_pymer4.UnitTests.test_hlm_m4" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_test_hlm_pymer4_UnitTests_test_hlm_m5 - 2018.12.10 at 18h 39m 14s.xml">
+      <configuration name="pytest for test_hlm_pymer4.UnitTests.test_hlm_m5" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_test_hlm_pymer4_UnitTests_test_hlm_m5 - 2018.12.10 at 18h 39m 58s.xml">
+      <configuration name="pytest for test_hlm_pymer4.UnitTests.test_hlm_m5" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_test_hlm_pymer4_UnitTests_test_hlm_m5 - 2018.12.10 at 20h 08m 33s.xml">
+      <configuration name="pytest for test_hlm_pymer4.UnitTests.test_hlm_m5" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_test_data_cleaning_UnitTests_test_valid_school_type - 2018.12.10 at 21h 10m 02s.xml">
+      <configuration name="pytest for test_data_cleaning.UnitTests.test_valid_school_type" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_data_cleaning_py - 2018.12.10 at 21h 10m 17s.xml">
+      <configuration name="pytest in test_data_cleaning.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_students_info_helper_py - 2018.12.10 at 21h 49m 04s.xml">
+      <configuration name="pytest in test_students_info_helper.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_students_info_helper_py - 2018.12.10 at 21h 49m 36s.xml">
+      <configuration name="pytest in test_students_info_helper.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_students_info_helper_py - 2018.12.10 at 21h 50m 01s.xml">
+      <configuration name="pytest in test_students_info_helper.py" configurationId="tests" />
+    </history-entry>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="2560" height="1376" extended-state="6" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14455917" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32866043" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.14563863" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.47311828" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="R Packages" />
-      <window_info anchor="right" id="R Graphics" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32891566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="R Graphics" order="3" />
+      <window_info anchor="right" id="R Packages" order="4" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>self.assertTrue(type(df['IBTEACH'].dtype) == float)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>df['IBTEACH'].dtype == float</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>type(df['IBTEACH'].dtype) == float</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>df['IBTEACH'].values[0]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>df['IBTEACH'][0]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>df['IBTEACH'][:,0]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>df['IBTEACH'].values</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>df['IBTEACH'].values()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>df['IBTEACH']</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/PISAnalysisTool/hlm_pymer4.py">
+    <entry file="file://$PROJECT_DIR$/pisanalysistool/correlation.py" />
+    <entry file="file://$PROJECT_DIR$/temp.py" />
+    <entry file="file://$PROJECT_DIR$/pisanalysistool/hlm_pymer4.py" />
+    <entry file="file://$PROJECT_DIR$/Examples/demo WB data.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/fomular_creator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1557" />
+        <state relative-caret-position="-1350" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/lib/python3.6/site-packages/pandas/io/parsers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="677" selection-start-line="677" selection-end-line="677" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/lib/python3.6/site-packages/matplotlib/colorbar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1494">
+          <caret line="83" column="16" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/tests/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/tests/test_correlation.py" />
+    <entry file="file://$USER_HOME$/miniconda3/lib/python3.6/site-packages/pandas/core/frame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="1652" column="8" selection-start-line="1652" selection-start-column="8" selection-end-line="1652" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/lib/python3.6/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="604" selection-start-line="604" selection-end-line="604" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/data/student_info.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="304">
+          <caret line="17" column="61" lean-forward="true" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/lib/python3.6/site-packages/pandas/core/series.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="3193" selection-start-line="3193" selection-end-line="3193" />
+          <folding>
+            <element signature="e#78#109#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="94" column="23" selection-start-line="94" selection-start-column="23" selection-end-line="94" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/data/sample data.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state>
+          <caret column="154" selection-start-column="154" selection-end-column="154" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/sphinx/index.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/sphinx/conf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gen_docs.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/sphinx/api/modules.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample data.csv" />
+    <entry file="file://$PROJECT_DIR$/doc/gen/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-62">
+          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/sphinx/api/pisa_analysis_tool.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/lib/python3.6/site-packages/rpy2/rinterface/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="145" selection-start-line="145" selection-end-line="145" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/lib/python3.6/site-packages/pymer4/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-72">
+          <caret line="250" selection-start-line="250" selection-end-line="250" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/lib/python3.6/site-packages/rpy2/robjects/functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="105" selection-start-line="105" selection-end-line="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/temp.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/lib/python3.6/site-packages/pandas/core/indexing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="1789" selection-start-line="1789" selection-end-line="1789" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/temp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="82" column="20" lean-forward="true" selection-start-line="82" selection-end-line="83" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/hlm_pymer4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4074">
+          <caret line="36" column="59" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="59" />
+          <folding>
+            <element signature="e#657#676#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/data_cleaning.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="63" column="96" selection-start-line="63" selection-start-column="96" selection-end-line="63" selection-end-column="96" />
+          <folding>
+            <element signature="e#239#258#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/mapdata.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/lib/python3.6/site-packages/pandas/core/sorting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4165">
+          <caret line="291" selection-start-line="291" selection-end-line="291" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/preprocessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-92">
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/tests/test_hlm_pymer4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/data/nations.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/formula_creator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/get_WDI_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="59" column="4" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/merge_csv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/correlation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="25" />
+          <folding>
+            <element signature="e#244#275#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/bokeh_plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="41" column="6" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/tests/test_data_cleaning.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="29" column="60" lean-forward="true" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/get_students_info.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/tests/test_preprocessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-186">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/tests/test_students_info_helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pisa_analysis_tool/students_info_helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="34" column="53" lean-forward="true" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
+          <folding>
+            <element signature="e#58#67#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>
