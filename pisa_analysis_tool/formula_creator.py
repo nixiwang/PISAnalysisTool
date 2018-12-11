@@ -4,6 +4,7 @@ According to user's input for lmer, creates a formular and
 its name
 """
 
+
 def formula_creator():
     """
     Creates a formular based on user's input for Lmer, 
@@ -31,7 +32,7 @@ def formula_creator():
             inter_list.append((inter_1, inter_2))
             stop_flag = input('Stop inputing? (y/n)')
     print()
-          
+
     fixed_list = []
     fixed = input('Fixed effect? (y/n)')
     if fixed == 'y':
@@ -42,7 +43,7 @@ def formula_creator():
             fixed_effect = input()
     print()
 
-    random_dic ={}
+    random_dic = {}
     random = input('Random effect? (y/n)')
     if random == 'y':
         print('Input random effect:')
@@ -99,6 +100,7 @@ def formula_creator():
 
     return res, name
 
+
 def main():
     """
     Generates the formular specified by the user
@@ -107,10 +109,6 @@ def main():
     print(f)
     print(n)
 
+
 if __name__ == '__main__':
     main()
-
-
-
-
-

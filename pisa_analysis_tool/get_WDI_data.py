@@ -6,6 +6,7 @@ Getting World Bank data from wbdata pakcage
 This module searches the indicators in the World Bank data and get a dataframe accordingly.
 """
 
+
 def country_data(country_code, indicator, start=2015, end=2015):
     """
     A function for specific country lookup.
@@ -53,6 +54,7 @@ def WB_country_data(indicator, start=2015, end=2015):
     data = data.reset_index()
     # data = data.dropna() #if I want I can drop the na's
     return data[['indicator']]
+
 
 def main():
     """

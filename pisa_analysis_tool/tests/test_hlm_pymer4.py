@@ -7,6 +7,7 @@ from pisa_analysis_tool.hlm_pymer4 import *
 
 THIS_DIR = os.path.dirname(os.path.abspath(__file__))
 
+
 class UnitTests(unittest.TestCase):
     def test_hlm_m0(self):
         """Run on a much smaller random sample of 273 rows only because
@@ -34,7 +35,6 @@ class UnitTests(unittest.TestCase):
         variance = np.array([0.014718, 0.008542, 0.027549])
         assert np.allclose(
             model_0_sci.ranef_var.loc[:, 'Var'], variance, atol=.01)
-
 
     def test_hlm_m1(self):
         """Run on a much smaller random sample of 273 rows only because
@@ -78,7 +78,6 @@ class UnitTests(unittest.TestCase):
         assert np.allclose(
             model_2_sci.coefs.loc[:, 'Estimate'], model_2_sci.fixef[0].mean(), atol=.01)
 
-
     def test_hlm_m3(self):
         """Run on a much smaller random sample of 273 rows only because
         it's slow to run even the sample data"""
@@ -105,7 +104,6 @@ class UnitTests(unittest.TestCase):
 
         assert np.allclose(
             model_3_sci.coefs.loc[:, 'Estimate'], model_3_sci.fixef[0].mean(), atol=.01)
-
 
     def test_hlm_m4(self):
         """Run on a much smaller random sample of 273 rows only because

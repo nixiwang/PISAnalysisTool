@@ -10,7 +10,7 @@ THIS_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 class UnitTests(unittest.TestCase):
-    
+
     def test_valid_school_type(self):
         """ Test for valid variable"""
         self.assertTrue(np.isnan(school_type('.I')))
@@ -27,7 +27,8 @@ class UnitTests(unittest.TestCase):
             school_type(10)
 
     def test_data_cleaning(self):
-        df = data_cleaning(os.path.join(THIS_DIR, os.pardir, 'data/student_info.csv'))
+        df = data_cleaning(os.path.join(
+            THIS_DIR, os.pardir, 'data/student_info.csv'))
         self.assertTrue(df['IBTEACH'].dtype == float)
         self.assertTrue(df['WEALTH'].dtype == float)
         self.assertTrue(df['ESCS'].dtype == float)
@@ -36,7 +37,8 @@ class UnitTests(unittest.TestCase):
 
     def test_small_sample(self):
         # Run on first 100 rows only because it's slow
-        df = pd.read_csv(os.path.join(THIS_DIR, os.pardir, 'data/sample data.csv'), header=0)[:100]
+        df = pd.read_csv(os.path.join(THIS_DIR, os.pardir,
+                                      'data/sample data.csv'), header=0)[:100]
         sample_df = small_sample(df)
         self.assertTrue(sample_df['CountryID'].dtype == int)
         self.assertTrue(sample_df['SchoolID'].dtype == int)

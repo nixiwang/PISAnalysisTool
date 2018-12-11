@@ -6,6 +6,7 @@ file accoding to 'CNTSCHID' and 'SUBNATIO'
 
 import pandas as pd
 
+
 def merge(file, output):
     """
     Merges file with school file according to 'CNTSCHID' and 'SUBNATIO',
@@ -18,6 +19,7 @@ def merge(file, output):
                       on=['CNTSCHID', 'SUBNATIO'])
     result.to_csv(output, index=False)
 
+
 def main():
     """
     Merges teacher file with school file and student file with
@@ -29,6 +31,7 @@ def main():
     student_output = 'stuscho.csv'
     merge(teacher_file, teacher_output)
     merge(student_file, student_output)
+
 
 if __name__ == '__main__':
     main()

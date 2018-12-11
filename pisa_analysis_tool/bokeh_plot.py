@@ -28,7 +28,6 @@ DF_F_AVG = pd.DataFrame.from_dict(F_DICT)
 DF_C_AVG = pd.DataFrame.from_dict(C_DICT)
 
 
-
 def get_score(df_male, df_female, subject):
     """
     Get a country's male and female score with respect to a subject.
@@ -42,6 +41,7 @@ def get_score(df_male, df_female, subject):
     male_res = df_male_new.to_dict('records')
     female_res = df_female_new.to_dict('records')
     return male_res, female_res
+
 
 def sort_by_country_avg(df_count, subject, m_res, f_res):
     """
@@ -136,6 +136,7 @@ def sort_by_country_avg(df_count, subject, m_res, f_res):
 
     return res, male_res, female_res
 
+
 def prepare_data(df_male_avg, df_female_avg, df_country_avg, subject):
     """
     Return the data we want for each subject
@@ -154,6 +155,7 @@ def prepare_data(df_male_avg, df_female_avg, df_country_avg, subject):
                                                         male_res,
                                                         female_res)
     return sub_res, m_sub_res, f_sub_res
+
 
 def plot_figure(res, male_res, female_res):
     """
@@ -180,7 +182,8 @@ def plot_figure(res, male_res, female_res):
                      title='Performance between male and female' +
                      'students for each country')
     p1_line.line(x_list, y_list, line_width=2)
-    p1_line.circle(x='x', y='overall_avg', fill_color="blue", size=8, source=source1)
+    p1_line.circle(x='x', y='overall_avg',
+                   fill_color="blue", size=8, source=source1)
 
     tooltips2 = [('Female average score', '@female_avg'),
                  ('Male average score', '@male_avg')]
@@ -201,7 +204,6 @@ def plot_figure(res, male_res, female_res):
                 color='#e84d60',
                 legend='male average score',
                 width=0.3)
-
 
     # change just some things about the y-axes
     p1_line.yaxis.axis_label = "Percentage (%)"
@@ -260,6 +262,7 @@ def main():
     combine_figures(math_res, male_math_res, female_math_res,
                     read_res, male_read_res, female_read_res,
                     sci_res, male_sci_res, female_sci_res)
+
 
 if __name__ == '__main__':
     main()

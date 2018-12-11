@@ -7,6 +7,7 @@ as a csv file
 import pandas as pd
 from students_info_helper import interface, extract_basic_df
 
+
 def get_student_info(input_file):
     """
     Takes a list of interested attributes, computes and extracts
@@ -31,11 +32,13 @@ def get_student_info(input_file):
     # Generates output file
     output_df.to_csv(name, encoding='utf-8')
 
+
 def main():
     """
     Extracts student infomation and generates a output csv file
     """
     get_student_info('data_files/small_stuscho.csv')
+
 
 if __name__ == '__main__':
     main()

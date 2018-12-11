@@ -32,12 +32,13 @@ def calculate_correlation(df, colnames):
     ax = fig.add_subplot(111)
     cax = ax.matshow(correlations, vmin=-1, vmax=1)
     fig.colorbar(cax)
-    ticks = np.arange(0,9,1)
+    ticks = np.arange(0, 9, 1)
     ax.set_xticks(ticks)
     ax.set_yticks(ticks)
     ax.set_xticklabels(names)
     ax.set_yticklabels(names)
     plt.show()
+
 
 def visual_scatterplot(df, colnames):
     """
@@ -52,6 +53,7 @@ def visual_scatterplot(df, colnames):
     scatter_matrix(df_plot)
     plt.show()
 
+
 def visual_histplot(df, colnames):
     """
     histogram plot
@@ -65,6 +67,7 @@ def visual_histplot(df, colnames):
     df_plot.hist()
     plt.show()
 
+
 def visual_densityplot(df, colnames):
     """
     Univariate density plot, as a way to look at distribution
@@ -75,7 +78,7 @@ def visual_densityplot(df, colnames):
     :return: a density plot
     """
     df_plot = df.loc[:, list(colnames)]
-    df_plot.plot(kind='density', subplots=True, layout=(4,4), sharex=False)
+    df_plot.plot(kind='density', subplots=True, layout=(4, 4), sharex=False)
     plt.show()
 
 
@@ -91,6 +94,7 @@ def main():
     visual_densityplot(df, colnames)
     df.Science.apply(lambda x: np.log(x + 0.1)).hist(bins=25)
     df.Sch_science_resource.hist(bins=25)
+
 
 if __name__ == '__main__':
     main()

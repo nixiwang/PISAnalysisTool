@@ -4,6 +4,7 @@ from pisa_analysis_tool.students_info_helper import *
 
 THIS_DIR = os.path.dirname(os.path.abspath(__file__))
 
+
 class UnitTests(unittest.TestCase):
 
     def test_sav_to_dataframe(self):
@@ -62,15 +63,16 @@ class UnitTests(unittest.TestCase):
         """Test for id greater than 97400000"""
         nID5 = student2nation(97400091)
         self.assertTrue(nID5 == 320100)
-    
+
     def test_info(self):
-        df = pd.read_csv(os.path.join(THIS_DIR, os.pardir,'data/nations.csv'))
+        df = pd.read_csv(os.path.join(THIS_DIR, os.pardir, 'data/nations.csv'))
         """Test for invalid nation id"""
         with self.assertRaises(IndexError):
             info(df, 0)
         """Test for valid nation id"""
         res = info(df, 360000)
         self.assertEqual(('Australia', 'AUS', 'AP'), res)
+
 
 if __name__ == '__main__':
     unittest.main()

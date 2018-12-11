@@ -7,6 +7,7 @@ import os
 import pandas as pd
 import savReaderWriter as spss
 
+
 def sav_to_dataframe(file):
     """
     Converts a sav file to a pandas dataframe
@@ -116,10 +117,12 @@ def infos(country_df, id_list):
         code_list.append(tpl[1])
         continent_list.append(tpl[2])
 
-    dictionary = {'CountryName':name_list, 'CountryCode': code_list, 'Continent':continent_list}
+    dictionary = {'CountryName': name_list,
+                  'CountryCode': code_list, 'Continent': continent_list}
     res = pd.DataFrame(dictionary)
 
     return res
+
 
 def extract_basic_df(df, country_dict_df):
     """
@@ -143,7 +146,6 @@ def extract_basic_df(df, country_dict_df):
                            df_read['Reading'], df_science['Science']],
                           axis=1, sort=False)
     return output_df
-
 
 
 def interface(df):

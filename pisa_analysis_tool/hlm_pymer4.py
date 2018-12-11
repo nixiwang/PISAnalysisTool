@@ -122,6 +122,7 @@ def fixed_effect_3level_model(dataframe):
 
     return model_2_sci
 
+
 def fixeff_interaction_3level_model(dataframe):
     """
     Multi-level model_3_sci includes intercept, variables as fixed, and an interaction term.
@@ -192,6 +193,7 @@ def mixeff_interaction_3level_model(dataframe):
                 fit_reg=True
                 )
     return model_4_sci
+
 
 def mixeff_multinteraction2level_model(dataframe):
     """
@@ -275,6 +277,8 @@ def model_sum_visual(model_x_sci, predictor, outcome):
 # Main: Loading data
 # ------------------
 #
+
+
 def main():
     """
     Run the function of intercept-only model, gradually adding in predictors, and interactions, with

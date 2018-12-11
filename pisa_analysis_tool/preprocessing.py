@@ -95,9 +95,12 @@ def top_10_countries(csv_dir):
                 top_10_science.add((row[0], row[3]))
             count = 1
     csv_file.close()
-    sorted_top_10_math = sorted(top_10_math, key=itemgetter(1), reverse=True)[0:10]
-    sorted_top_10_reading = sorted(top_10_reading, key=itemgetter(1), reverse=True)[0:10]
-    sorted_top_10_science = sorted(top_10_science, key=itemgetter(1), reverse=True)[0:10]
+    sorted_top_10_math = sorted(
+        top_10_math, key=itemgetter(1), reverse=True)[0:10]
+    sorted_top_10_reading = sorted(
+        top_10_reading, key=itemgetter(1), reverse=True)[0:10]
+    sorted_top_10_science = sorted(
+        top_10_science, key=itemgetter(1), reverse=True)[0:10]
     return sorted_top_10_math, sorted_top_10_reading, sorted_top_10_science
 
 
@@ -164,8 +167,3 @@ def remove_country(csv_dir, country_dict, country_lst):
             count = 1
     f.close()
     return needed_country
-
-
-
-
-

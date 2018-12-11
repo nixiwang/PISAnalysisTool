@@ -10,13 +10,14 @@ from pisa_analysis_tool.preprocessing import *
 
 THIS_DIR = os.path.dirname(os.path.abspath(__file__))
 
+
 class UnitTests(unittest.TestCase):
     subject_lst = ['Mathematics', 'Reading', 'Science']
 
     def test_make_country_dict(self):
         country_dict = make_country_dict()
         self.assertTrue('Algeria' in country_dict.keys())
-        self.assertTrue(country_dict.get('Brazil') == (-10.772,-53.089))
+        self.assertTrue(country_dict.get('Brazil') == (-10.772, -53.089))
 
     def test_add_lat_long(self):
         country_dict = make_country_dict()

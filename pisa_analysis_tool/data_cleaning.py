@@ -12,6 +12,7 @@ import pandas as pd
 import numpy as np
 from scipy.stats import zscore
 
+
 def school_type(value):
     """
     In the 'School_type' variable there are multiple responses labeled as 'Invalid', or 'No response'.
@@ -47,7 +48,8 @@ def data_cleaning(filename):
     :return: a dataframe to csv file
     """
     # changing datatype
-    df = pd.read_csv(filename, encoding='latin-1', na_values=['', ' '], dtype={'SC013Q01TA': str})
+    df = pd.read_csv(filename, encoding='latin-1',
+                     na_values=['', ' '], dtype={'SC013Q01TA': str})
     df['IBTEACH'] = df.IBTEACH.astype(float)
     df['WEALTH'] = df.WEALTH.astype(float)
     df['ESCS'] = df.ESCS.astype(float)
@@ -58,10 +60,12 @@ def data_cleaning(filename):
     df['log_science'] = np.log(df.Science)
 
     # rename column names
-    df.rename(columns={'SC013Q01TA': 'School_type', 'SCIERES': 'Sch_science_resource'}, inplace=True)
+    df.rename(columns={'SC013Q01TA': 'School_type',
+                       'SCIERES': 'Sch_science_resource'}, inplace=True)
 
     # replacing '99' as NaN in all columns
-    df.loc[:, 'IBTEACH': 'Sch_science_resource'] = df.loc[:, 'IBTEACH': 'Sch_science_resource'].replace(99, np.NaN)
+    df.loc[:, 'IBTEACH': 'Sch_science_resource'] = df.loc[:,
+                                                          'IBTEACH': 'Sch_science_resource'].replace(99, np.NaN)
     df['School_type'] = df['School_type'].apply(school_type).astype(float)
     df.dropna(inplace=True)
 
