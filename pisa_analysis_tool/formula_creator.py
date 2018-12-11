@@ -1,14 +1,14 @@
 """
-CSE583 Project
-According to user's input for lmer, creates a formular and
+Tool for generating formulas
+Given user's input for lmer, creates a formula and
 its name
 """
 
 
 def formula_creator():
     """
-    Creates a formular based on user's input for Lmer,
-    and a name describing the formular.
+    Creates a formula based on user's input for Lmer,
+    and a name describing the formula.
     """
     outcome = input('Input outcome value:')
     print()
@@ -103,7 +103,7 @@ def formula_creator():
 
 def main():
     """
-    Generates the formular specified by the user
+    Generates the formula specified by the user
     """
     f, n = formula_creator()
     print(f)

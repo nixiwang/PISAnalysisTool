@@ -5,9 +5,9 @@ Processing map data
 
 import pandas as pd
 import folium
-from preprocessing import make_country_dict
-from preprocessing import add_lat_long
-from preprocessing import remove_country
+from pisa_analysis_tool.preprocessing import make_country_dict
+from pisa_analysis_tool.preprocessing import add_lat_long
+from pisa_analysis_tool.preprocessing import remove_country
 
 # json file with countries' name and their geographical data
 country_geo = '../../data/world_ogr.json'

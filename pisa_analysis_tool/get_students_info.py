@@ -5,7 +5,8 @@ as a csv file
 """
 
 import pandas as pd
-from students_info_helper import interface, extract_basic_df
+from pisa_analysis_tool.students_info_helper import interface, \
+    extract_basic_df
 
 
 def get_student_info(input_file):
@@ -16,7 +17,7 @@ def get_student_info(input_file):
     """
     # Reads csv files and creates dataframe
     df = pd.read_csv(input_file)
-    country_dict_df = pd.read_csv('data_files/nations.csv')
+    country_dict_df = pd.read_csv('data/nations.csv')
 
     # Generates basic dataframe
     df_basic = extract_basic_df(df, country_dict_df)
@@ -37,7 +38,7 @@ def main():
     """
     Extracts student infomation and generates a output csv file
     """
-    get_student_info('data_files/small_stuscho.csv')
+    get_student_info('data/student_info.csv')
 
 
 if __name__ == '__main__':

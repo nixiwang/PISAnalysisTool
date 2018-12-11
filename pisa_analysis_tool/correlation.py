@@ -1,10 +1,8 @@
 """
-CSE583 Project
-============================
 Running descriptive visuals
 ============================
-The following module offers visualization for descriptive statstics such as
-correlation, scatter plot,
+The following module offers visualization for descriptive statistics such as
+correlation plot, scatter plot,
 density plot, and histograms.
 """
 
@@ -16,10 +14,12 @@ from pandas.plotting import scatter_matrix
 
 def calculate_correlation(df, colnames):
     """
-    A general function to calculate correlations between selected variables
+    A general function to calculate and visualize correlations
+    between selected variables
 
     :param df: a data frame with student ID, school ID, country ID,
     science, math, reading, and other five selected variables as predictors.
+
     :param colnames: a list of focal variables
     :return: a plot of correlations
     """

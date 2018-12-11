@@ -1,18 +1,14 @@
 """
-CSE583 Project
-=======================================
 Fitting and plotting multi-level models
 =======================================
 This module runs models through pymer4 package for the examplar inquiry,
 which is to investigate the school-level and country-level factors that predict
-students' science
-performance in the PISA 2015 dataset, and mediate gender differences in science
-performance.
+students' science performance in the PISA 2015 data set, and mediate
+gender differences in science performance.
 Here each model category is exemplified with a selection of variables
 and we will show a demonstration of model fitting with regard to
 gender (female) and a group of other interested factors. The results show the
-model
-coefficients for each model.
+model coefficients for each model.
 """
 
 import pandas as pd

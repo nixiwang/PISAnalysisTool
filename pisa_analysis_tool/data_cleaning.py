@@ -1,6 +1,4 @@
 """
-CSE583 Project
-================
 Cleaning data
 ================
 The following module demonstrates data cleaning procedures such as recoding,

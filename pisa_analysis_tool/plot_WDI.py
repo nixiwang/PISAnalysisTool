@@ -2,7 +2,7 @@
 # function above WB_country_data to
 # get a list of indicators for each country,then plot a line diagram
 
-from get_WDI_data import country_data
+from pisa_analysis_tool.get_WDI_data import country_data
 
 
 def plot_indicators(country_list, indicator, start=2000, end=2015):
