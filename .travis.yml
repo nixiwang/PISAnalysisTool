@@ -16,6 +16,8 @@ install:
     - pip install coverage
     - pip install coveralls
     - pip install flake8
+    - pip install conda
+    - conda install -c conda-forge r r-base r-lmertest r-lsmeans rpy2
     - pip install -r requirements.txt
 
 
