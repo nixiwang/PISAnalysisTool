@@ -22,7 +22,8 @@ class UnitTests(unittest.TestCase):
     def test_add_lat_long(self):
         country_dict = make_country_dict()
         new_file, country_lst = add_lat_long(
-            os.path.join(THIS_DIR, os.pardir, 'data/Copy of world_score_male_avg.csv'), country_dict)
+            os.path.join(THIS_DIR, os.pardir,
+                         'data/Copy of world_score_male_avg.csv'), country_dict)
         df = pd.DataFrame.from_dict(new_file)
         df.to_csv('new_file.csv')
         self.assertEqual(61, len(new_file.get('CountryName')))

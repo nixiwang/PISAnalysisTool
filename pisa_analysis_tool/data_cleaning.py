@@ -3,10 +3,10 @@ CSE583 Project
 ================
 Cleaning data
 ================
-The following module demonstrates data cleaning procedures such as recoding, missing data handling,
+The following module demonstrates data cleaning procedures such as recoding,
+missing data handling,
 standardization, and subsetting a small sample data for modeling.
 """
-
 
 import pandas as pd
 import numpy as np
@@ -15,8 +15,10 @@ from scipy.stats import zscore
 
 def school_type(value):
     """
-    In the 'School_type' variable there are multiple responses labeled as 'Invalid', or 'No response'.
-    These will be coded along with system missing code '99' as 'NaN'. The 'public' and 'private' school type will be
+    In the 'School_type' variable there are multiple responses labeled as
+    'Invalid', or 'No response'.
+    These will be coded along with system missing code '99' as 'NaN'.
+    The 'public' and 'private' school type will be
     recoded as 1 and -1 respectively.
     """
     if value == '8':
@@ -41,7 +43,8 @@ def school_type(value):
 
 def data_cleaning(filename):
     """
-    Function to clean data types, create log_score, effect-coding variables, and dealing with NAs.
+    Function to clean data types, create log_score, effect-coding variables,
+    and dealing with NAs.
 
     :param df: a data frame with student ID, school ID, country ID,
     science, math, reading, and other five selected variables as predictors.
@@ -64,8 +67,8 @@ def data_cleaning(filename):
                        'SCIERES': 'Sch_science_resource'}, inplace=True)
 
     # replacing '99' as NaN in all columns
-    df.loc[:, 'IBTEACH': 'Sch_science_resource'] = df.loc[:,
-                                                          'IBTEACH': 'Sch_science_resource'].replace(99, np.NaN)
+    df.loc[:, 'IBTEACH': 'Sch_science_resource'] = (
+        df.loc[:, 'IBTEACH': 'Sch_science_resource'].replace(99, np.NaN))
     df['School_type'] = df['School_type'].apply(school_type).astype(float)
     df.dropna(inplace=True)
 
@@ -73,7 +76,8 @@ def data_cleaning(filename):
     print(df.shape)
     print(df.isnull().sum())
 
-    # creating "female" variable effect coded for each country, female = 1, male = -1
+    # creating "female" variable effect coded for each country,
+    # female = 1, male = -1
     df['female'] = df.Gender.map({'Female': 1, 'Male': -1})
 
     # creating z-scores for selected variables
@@ -86,20 +90,23 @@ def small_sample(df):
     """
     output a random sample data csv file for smaller sample analysis
     """
-    df_s = df.groupby(['CountryID', 'SchoolID']).apply(lambda x: x.sample(frac=0.5, random_state=999)).\
+    df_s = df.groupby(['CountryID', 'SchoolID']).apply(
+        lambda x: x.sample(frac=0.5, random_state=999)). \
         reset_index(drop=True)
     return df_s
 
 
 def main():
     """
-    Run functions of cleaning and subsetting the data based on multiple levels to be used for modeling
+    Run functions of cleaning and subsetting the data based on multiple levels
+     to be used for modeling
 
         :param df: a data frame with student ID, school ID, country ID,
         science, math, reading, and other five selected variables as predictors.
         :return: two csv files, one with complete data, one with subsetted data
     """
-    # df = pd.read_csv("data/student_info.csv", encoding='latin-1', na_values=['', ' '])
+    # df = pd.read_csv("data/student_info.csv", encoding='latin-1',
+    # na_values=['', ' '])
     df = data_cleaning("data/student_info.csv")
     sample_df = small_sample(df)
     sample_df.to_csv('sample data.csv', encoding='utf-8')

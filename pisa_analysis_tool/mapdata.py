@@ -7,7 +7,6 @@ import pandas as pd
 import folium
 from preprocessing import *
 
-
 # json file with countries' name and their geographical data
 country_geo = '../../data/world_ogr.json'
 # gender coefficient data for countries
@@ -20,7 +19,6 @@ country_avg_csv = '../../data/world_score_avg.csv'
 
 country_dict = make_country_dict()
 
-
 male_avg_dict, country_lst = add_lat_long(male_avg_csv, country_dict)
 female_avg_dict, country_lst1 = add_lat_long(female_avg_csv, country_dict)
 country_avg_dict, country_lst2 = add_lat_long(country_avg_csv, country_dict)
@@ -32,10 +30,8 @@ df_country_avg = pd.DataFrame.from_dict(country_avg_dict)
 needed_country = remove_country(gender_coeff, country_dict, country_lst)
 indicator_data = pd.DataFrame.from_dict(needed_country)
 
-
 # initalize the position when the html file is open
 m1 = folium.Map(location=[50, 15], zoom_start=1.5)
-
 
 # Add the color for the chloropleth:
 m1.choropleth(
@@ -122,7 +118,6 @@ m1.choropleth(
     nan_fill_color='#8c8c8c',
     legend_name='World Bank gender parity index(GPI)'
 )  # World Bank gender parity index(GPI) layer
-
 
 # add markers for each country in the csv file
 for i in range(0, len(df_female_avg)):

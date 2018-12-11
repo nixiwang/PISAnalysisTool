@@ -180,7 +180,7 @@ def plot_figure(res, male_res, female_res):
                      plot_height=500,
                      tooltips=tooltips1,
                      title='Performance between male and female' +
-                     'students for each country')
+                           'students for each country')
     p1_line.line(x_list, y_list, line_width=2)
     p1_line.circle(x='x', y='overall_avg',
                    fill_color="blue", size=8, source=source1)
@@ -191,7 +191,7 @@ def plot_figure(res, male_res, female_res):
                     plot_height=500,
                     tooltips=tooltips2,
                     title='Performance male and female students' +
-                    'for each country')
+                          'for each country')
     p1_bar.vbar(x=dodge('x', -0.15, range=p1_line.x_range),
                 top='female_avg',
                 source=source1,
@@ -224,13 +224,19 @@ def combine_figures(math_res, male_math_res, female_math_res,
     Combine the plot in one html.
     :param math_res: a dictionary with mean math gender coefficient for each bin
     :param male_math_res: a dictionary with mean male math score for each bin
-    :param female_math_res: a dictionary with mean female math score for each bin
-    :param read_res: a dictionary with mean reading gender coefficient for each bin
-    :param male_read_res: a dictionary with mean male reading score for each bin
-    :param female_read_res: a dictionary with mean female reading score for each bin
-    :param sci_res: a dictionary with mean science gender coefficient for each bin
+    :param female_math_res: a dictionary with mean female math score for each
+    bin
+    :param read_res: a dictionary with mean reading gender coefficient for each
+    bin
+    :param male_read_res: a dictionary with mean male reading score for each
+    bin
+    :param female_read_res: a dictionary with mean female reading score for each
+    bin
+    :param sci_res: a dictionary with mean science gender coefficient for each
+    bin
     :param male_sci_res: a dictionary with mean male science score for each bin
-    :param female_sci_res: a dictionary with mean female science score for each bin
+    :param female_sci_res: a dictionary with mean female science score for each
+    bin
     :return: a html file
     """
     math_plot = plot_figure(math_res, male_math_res, female_math_res)

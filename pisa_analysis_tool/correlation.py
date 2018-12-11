@@ -3,10 +3,10 @@ CSE583 Project
 ============================
 Running descriptive visuals
 ============================
-The following module offers visualization for descriptive statstics such as correlation, scatter plot,
+The following module offers visualization for descriptive statstics such as
+correlation, scatter plot,
 density plot, and histograms.
 """
-
 
 import matplotlib.pyplot as plt
 import pandas as pd

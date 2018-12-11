@@ -3,7 +3,8 @@ CSE583 Project
 ===========================================
 Getting World Bank data from wbdata pakcage
 ===========================================
-This module searches the indicators in the World Bank data and get a dataframe accordingly.
+This module searches the indicators in the World Bank data and get a dataframe
+accordingly.
 """
 
 

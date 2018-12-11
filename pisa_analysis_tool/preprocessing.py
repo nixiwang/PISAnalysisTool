@@ -24,7 +24,8 @@ def preprocessing():
     :return: none
     """
     df = pd.read_csv(file_dir)
-    df.drop(['Unnamed: 0', 'SC013Q01TA', 'SCIERES', 'IBTEACH', 'WEALTH', 'ESCS', 'SchoolID', 'StudentID', 'CountryID'],
+    df.drop(['Unnamed: 0', 'SC013Q01TA', 'SCIERES', 'IBTEACH', 'WEALTH',
+             'ESCS', 'SchoolID', 'StudentID', 'CountryID'],
             axis=1, inplace=True)
     df_avg = df.groupby('CountryName').mean()
     df_avg.to_csv('../../data/world_score_avg.csv')
@@ -40,9 +41,11 @@ def preprocessing():
 
 def add_lat_long(filedir, country_dict):
     """
-    read a csv file and add countries' latitude and longitude data behind the last column.
+    read a csv file and add countries' latitude and longitude data behind the
+    last column.
     :param filedir: directory of csv file
-    :param country_dict: a dictionary which keys are country names and values are [lat, lon]
+    :param country_dict: a dictionary which keys are country names and values
+    are [lat, lon]
     :return: new csv file and a list of countries which have PISA test score
     """
     new_file = dict()
@@ -78,7 +81,8 @@ def add_lat_long(filedir, country_dict):
 
 def top_10_countries(csv_dir):
     """
-    for each csv file, sort the countries by different subject average scores from high to low
+    for each csv file, sort the countries by different subject average scores
+    from high to low
     :param csv_dir: directory of the csv file
     :return: top 10 countries with three different subjects.
     """
@@ -145,9 +149,11 @@ def make_country_dict():
 
 def remove_country(csv_dir, country_dict, country_lst):
     """
-    extract the countries which have gender parity index and also in world country data
+    extract the countries which have gender parity index and also in world
+    country data
     :param csv_dir: a csv file which have gender coefficent.
-    :param country_dict: a dictionary which keys are country name and value are (lat, lon)
+    :param country_dict: a dictionary which keys are country name and value
+    are (lat, lon)
     :param country_lst: a list of countries which have PISA test score
     :return: a dictionary with country name and gender parity index
     """

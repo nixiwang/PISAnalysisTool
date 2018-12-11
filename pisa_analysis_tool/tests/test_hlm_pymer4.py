@@ -12,8 +12,10 @@ class UnitTests(unittest.TestCase):
     def test_hlm_m0(self):
         """Run on a much smaller random sample of 273 rows only because
         it's slow to run even the sample data"""
-        df = pd.read_csv(os.path.join(THIS_DIR, os.pardir, 'data/sample data.csv'))\
-            .groupby(['CountryID', 'SchoolID']).apply(lambda x: x.sample(frac=0.02, random_state=999))\
+        df = pd.read_csv(
+            os.path.join(THIS_DIR, os.pardir, 'data/sample data.csv')) \
+            .groupby(['CountryID', 'SchoolID']).apply(
+            lambda x: x.sample(frac=0.02, random_state=999)) \
             .reset_index(drop=True)
         model_0_sci = random_intercept_3level_model(df)
 
@@ -39,8 +41,10 @@ class UnitTests(unittest.TestCase):
     def test_hlm_m1(self):
         """Run on a much smaller random sample of 273 rows only because
         it's slow to run even the sample data"""
-        df = pd.read_csv(os.path.join(THIS_DIR, os.pardir, 'data/sample data.csv'))\
-            .groupby(['CountryID', 'SchoolID']).apply(lambda x: x.sample(frac=0.02, random_state=999))\
+        df = pd.read_csv(
+            os.path.join(THIS_DIR, os.pardir, 'data/sample data.csv')) \
+            .groupby(['CountryID', 'SchoolID']).apply(
+            lambda x: x.sample(frac=0.02, random_state=999)) \
             .reset_index(drop=True)
         model_1_sci = random_effect_2level_model(df)
 
@@ -54,8 +58,10 @@ class UnitTests(unittest.TestCase):
     def test_hlm_m2(self):
         """Run on a much smaller random sample of 273 rows only because
         it's slow to run even the sample data"""
-        df = pd.read_csv(os.path.join(THIS_DIR, os.pardir, 'data/sample data.csv'))\
-            .groupby(['CountryID', 'SchoolID']).apply(lambda x: x.sample(frac=0.02, random_state=999))\
+        df = pd.read_csv(
+            os.path.join(THIS_DIR, os.pardir, 'data/sample data.csv')) \
+            .groupby(['CountryID', 'SchoolID']).apply(
+            lambda x: x.sample(frac=0.02, random_state=999)) \
             .reset_index(drop=True)
         model_2_sci = fixed_effect_3level_model(df)
 
@@ -76,13 +82,16 @@ class UnitTests(unittest.TestCase):
         assert model_2_sci.ranef_var.shape == (3, 3)
 
         assert np.allclose(
-            model_2_sci.coefs.loc[:, 'Estimate'], model_2_sci.fixef[0].mean(), atol=.01)
+            model_2_sci.coefs.loc[:, 'Estimate'], model_2_sci.fixef[0].mean(),
+            atol=.01)
 
     def test_hlm_m3(self):
         """Run on a much smaller random sample of 273 rows only because
         it's slow to run even the sample data"""
-        df = pd.read_csv(os.path.join(THIS_DIR, os.pardir, 'data/sample data.csv'))\
-            .groupby(['CountryID', 'SchoolID']).apply(lambda x: x.sample(frac=0.02, random_state=999))\
+        df = pd.read_csv(
+            os.path.join(THIS_DIR, os.pardir, 'data/sample data.csv')) \
+            .groupby(['CountryID', 'SchoolID']).apply(
+            lambda x: x.sample(frac=0.02, random_state=999)) \
             .reset_index(drop=True)
         model_3_sci = fixeff_interaction_3level_model(df)
 
@@ -103,13 +112,16 @@ class UnitTests(unittest.TestCase):
         assert model_3_sci.ranef_var.shape == (3, 3)
 
         assert np.allclose(
-            model_3_sci.coefs.loc[:, 'Estimate'], model_3_sci.fixef[0].mean(), atol=.01)
+            model_3_sci.coefs.loc[:, 'Estimate'], model_3_sci.fixef[0].mean(),
+            atol=.01)
 
     def test_hlm_m4(self):
         """Run on a much smaller random sample of 273 rows only because
         it's slow to run even the sample data"""
-        df = pd.read_csv(os.path.join(THIS_DIR, os.pardir, 'data/sample data.csv'))\
-            .groupby(['CountryID', 'SchoolID']).apply(lambda x: x.sample(frac=0.02, random_state=999))\
+        df = pd.read_csv(
+            os.path.join(THIS_DIR, os.pardir, 'data/sample data.csv')) \
+            .groupby(['CountryID', 'SchoolID']).apply(
+            lambda x: x.sample(frac=0.02, random_state=999)) \
             .reset_index(drop=True)
         model_4_sci = mixeff_interaction_3level_model(df)
 
@@ -131,13 +143,16 @@ class UnitTests(unittest.TestCase):
         assert model_4_sci.ranef_var.shape == (5, 3)
 
         assert np.allclose(
-            model_4_sci.coefs.loc[:, 'Estimate'], model_4_sci.fixef[0].mean(), atol=.01)
+            model_4_sci.coefs.loc[:, 'Estimate'], model_4_sci.fixef[0].mean(),
+            atol=.01)
 
     def test_hlm_m5(self):
         """Run on a much smaller random sample of 273 rows only because
         it's slow to run even the sample data"""
-        df = pd.read_csv(os.path.join(THIS_DIR, os.pardir, 'data/sample data.csv'))\
-            .groupby(['CountryID', 'SchoolID']).apply(lambda x: x.sample(frac=0.02, random_state=999))\
+        df = pd.read_csv(
+            os.path.join(THIS_DIR, os.pardir, 'data/sample data.csv')) \
+            .groupby(['CountryID', 'SchoolID']).apply(
+            lambda x: x.sample(frac=0.02, random_state=999)) \
             .reset_index(drop=True)
         model_5_sci = mixeff_multinteraction2level_model(df)
 

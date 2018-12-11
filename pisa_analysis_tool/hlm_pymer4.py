@@ -4,14 +4,16 @@ CSE583 Project
 Fitting and plotting multi-level models
 =======================================
 This module runs models through pymer4 package for the examplar inquiry,
-which is to investigate the school-level and country-level factors that predict students' science
-performance in the PISA 2015 dataset, and mediate gender differences in science performance.
+which is to investigate the school-level and country-level factors that predict
+students' science
+performance in the PISA 2015 dataset, and mediate gender differences in science
+performance.
 Here each model category is exemplified with a selection of variables
 and we will show a demonstration of model fitting with regard to
-gender (female) and a group of other interested factors. The results show the model
+gender (female) and a group of other interested factors. The results show the
+model
 coefficients for each model.
 """
-
 
 import pandas as pd
 import seaborn as sns
@@ -24,7 +26,8 @@ from pymer4.models import Lmer
 #
 def random_intercept_3level_model(dataframe):
     """
-    Multi-level model_0_sci includes grand-mean intercept and setting outcome of log science
+    Multi-level model_0_sci includes grand-mean intercept and setting outcome
+    of log science
     scores as random.
 
         :param dataframe: a data frame with student ID, school ID, country ID,
@@ -54,7 +57,8 @@ def random_intercept_3level_model(dataframe):
 
 def random_effect_2level_model(dataframe):
     """
-    Multi-level model_1_sci includes intercept, variable as fixed and the interaction term
+    Multi-level model_1_sci includes intercept, variable as fixed and the
+    interaction term
     random on country level.
 
         :param dataframe: a data frame with student ID, school ID, country ID,
@@ -125,7 +129,8 @@ def fixed_effect_3level_model(dataframe):
 
 def fixeff_interaction_3level_model(dataframe):
     """
-    Multi-level model_3_sci includes intercept, variables as fixed, and an interaction term.
+    Multi-level model_3_sci includes intercept, variables as fixed, and an
+    interaction term.
 
         :param dataframe: a data frame with student ID, school ID, country ID,
         science, math, reading, and other five selected variables as predictors.
@@ -160,7 +165,8 @@ def fixeff_interaction_3level_model(dataframe):
 
 def mixeff_interaction_3level_model(dataframe):
     """
-    Multi-level model_4_sci includes intercept, school resource as random, others as fixed including
+    Multi-level model_4_sci includes intercept, school resource as random,
+    others as fixed including
      interaction.
 
         :param dataframe: a data frame with student ID, school ID, country ID,
@@ -197,7 +203,8 @@ def mixeff_interaction_3level_model(dataframe):
 
 def mixeff_multinteraction2level_model(dataframe):
     """
-    Multi-level model_5_sci includes intercept, multiple interactions and fixed effects,
+    Multi-level model_5_sci includes intercept, multiple interactions and
+    fixed effects,
      and setting ESCS as random on country level.
 
         :param dataframe: a data frame with student ID, school ID, country ID,
@@ -205,10 +212,11 @@ def mixeff_multinteraction2level_model(dataframe):
         :return: the model results
     """
     # one random effect and multiple interactions between gender and factors
-    model_5_sci = Lmer('log_science ~ IBTEACH + WEALTH + ESCS + female + Sch_science_resource '
-                       '+ female*ESCS '
-                       '+ female*WEALTH + female*IBTEACH + (ESCS | CountryID)',
-                       data=dataframe)
+    model_5_sci = Lmer(
+        'log_science ~ IBTEACH + WEALTH + ESCS + female + Sch_science_resource '
+        '+ female*ESCS '
+        '+ female*WEALTH + female*IBTEACH + (ESCS | CountryID)',
+        data=dataframe)
     # model must be fitted in order to get estimate results
     model_5_sci.fit(REML=False)
     # print summary since auto-generated result doesn't include fixed effects
@@ -237,8 +245,10 @@ def mixeff_multinteraction2level_model(dataframe):
 # Model fit
 # BIC change (of main effects combined M0 to M1
 # BIC change (of main effects combined M1 to M2
-# Using a likelihood ratio test (LRT) to test the difference between any two models
-# Calculate the change in approximate variance explained (approximate R2) M0 to M1, to M2.
+# Using a likelihood ratio test (LRT) to test the difference between
+# any two models
+# Calculate the change in approximate variance explained (approximate R2) M0
+# to M1, to M2.
 
 #####################
 # Visualizing results
@@ -247,10 +257,13 @@ def mixeff_multinteraction2level_model(dataframe):
 # Visualize model summary
 def model_sum_visual(model_x_sci, predictor, outcome):
     """
-    A general function of plotting model results, including the coefficients with 95% confidence
-    intervals, and cluster level estimates overlaid, as well as fit and residuals.
+    A general function of plotting model results, including the coefficients
+    with 95% confidence
+    intervals, and cluster level estimates overlaid, as well as fit and
+    residuals.
 
-            :param model_x_sci: a list of lists of model results assigned to a name
+            :param model_x_sci: a list of lists of model results assigned to
+            a name
             :param predictor: a string of predictor indicator
             :param outcome: a string of outcome variable
     """
@@ -273,6 +286,7 @@ def model_sum_visual(model_x_sci, predictor, outcome):
                 fit_reg=True
                 )
 
+
 ####################
 # Main: Loading data
 # ------------------
@@ -281,7 +295,8 @@ def model_sum_visual(model_x_sci, predictor, outcome):
 
 def main():
     """
-    Run the function of intercept-only model, gradually adding in predictors, and interactions, with
+    Run the function of intercept-only model, gradually adding in predictors,
+    and interactions, with
     focal interest variable of female and science outcome.
     """
     # Reading PISA csv file

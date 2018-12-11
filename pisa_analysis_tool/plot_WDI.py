@@ -1,4 +1,5 @@
-# A grand function that takes as input a list of country codes, then uses our function above WB_country_data to
+# A grand function that takes as input a list of country codes, then uses our
+# function above WB_country_data to
 # get a list of indicators for each country,then plot a line diagram
 
 
