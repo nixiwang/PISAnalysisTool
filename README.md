@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/nixiwang/PISAnalysisTool.svg?branch=master)](https://travis-ci.org/nixiwang/PISAnalysisTool)
+[![Package versioning](https://img.shields.io/pypi/v/PISAnalysisTool.svg)](https://pypi.python.org/pypi?name=PISAnalysisTool&version=0.1.0&:action=display)
 
 PISAnalysisTool
 ================

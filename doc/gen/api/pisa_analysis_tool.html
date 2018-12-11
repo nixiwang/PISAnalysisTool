@@ -46,7 +46,8 @@
 </div>
 <div class="section" id="running-descriptive-visuals">
 <h3>Running descriptive visuals<a class="headerlink" href="#running-descriptive-visuals" title="Permalink to this headline">¶</a></h3>
-<p>The following module offers visualization for descriptive statstics such as correlation, scatter plot,
+<p>The following module offers visualization for descriptive statstics such as
+correlation, scatter plot,
 density plot, and histograms.</p>
 <dl class="function">
 <dt id="pisa_analysis_tool.correlation.calculate_correlation">
@@ -117,12 +118,14 @@ science, math, reading, and other five selected variables as predictors.
 </div>
 <div class="section" id="cleaning-data">
 <h3>Cleaning data<a class="headerlink" href="#cleaning-data" title="Permalink to this headline">¶</a></h3>
-<p>The following module demonstrates data cleaning procedures such as recoding, missing data handling,
+<p>The following module demonstrates data cleaning procedures such as recoding,
+missing data handling,
 standardization, and subsetting a small sample data for modeling.</p>
 <dl class="function">
 <dt id="pisa_analysis_tool.data_cleaning.data_cleaning">
 <code class="descclassname">pisa_analysis_tool.data_cleaning.</code><code class="descname">data_cleaning</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.data_cleaning.data_cleaning" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function to clean data types, create log_score, effect-coding variables, and dealing with NAs.</p>
+<dd><p>Function to clean data types, create log_score, effect-coding variables,
+and dealing with NAs.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -138,8 +141,10 @@ standardization, and subsetting a small sample data for modeling.</p>
 <dl class="function">
 <dt id="pisa_analysis_tool.data_cleaning.main">
 <code class="descclassname">pisa_analysis_tool.data_cleaning.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.data_cleaning.main" title="Permalink to this definition">¶</a></dt>
-<dd><p>Run functions of cleaning and subsetting the data based on multiple levels to be used for modeling</p>
-<blockquote>
+<dd><dl class="docutils">
+<dt>Run functions of cleaning and subsetting the data based on multiple levels</dt>
+<dd><p class="first">to be used for modeling</p>
+<blockquote class="last">
 <div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -148,16 +153,21 @@ standardization, and subsetting a small sample data for modeling.</p>
 </tr>
 </tbody>
 </table>
-<p>science, math, reading, and other five selected variables as predictors.
+<p>science, math, reading, and other five selected variables as
+predictors.
 :return: two csv files, one with complete data, one with subsetted data</p>
 </div></blockquote>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="pisa_analysis_tool.data_cleaning.school_type">
 <code class="descclassname">pisa_analysis_tool.data_cleaning.</code><code class="descname">school_type</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.data_cleaning.school_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>In the ‘School_type’ variable there are multiple responses labeled as ‘Invalid’, or ‘No response’.
-These will be coded along with system missing code ‘99’ as ‘NaN’. The ‘public’ and ‘private’ school type will be
+<dd><p>In the ‘School_type’ variable there are multiple responses labeled as
+‘Invalid’, or ‘No response’.
+These will be coded along with system missing code ‘99’ as ‘NaN’.
+The ‘public’ and ‘private’ school type will be
 recoded as 1 and -1 respectively.</p>
 </dd></dl>
 
@@ -169,26 +179,8 @@ recoded as 1 and -1 respectively.</p>
 
 </div>
 </div>
-<div class="section" id="module-pisa_analysis_tool.fomular_creator">
-<span id="pisa-analysis-tool-fomular-creator-module"></span><h2>pisa_analysis_tool.fomular_creator module<a class="headerlink" href="#module-pisa_analysis_tool.fomular_creator" title="Permalink to this headline">¶</a></h2>
-<p>CSE583 Project
-This program creates a fomular based on user’s input
-for Lmer and a name describing the fomular.</p>
-<dl class="function">
-<dt id="pisa_analysis_tool.fomular_creator.fomular_creator">
-<code class="descclassname">pisa_analysis_tool.fomular_creator.</code><code class="descname">fomular_creator</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.fomular_creator.fomular_creator" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a fomular based on user’s input for Lmer,
-and a name describing the fomular.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="pisa_analysis_tool.fomular_creator.main">
-<code class="descclassname">pisa_analysis_tool.fomular_creator.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.fomular_creator.main" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a fomular based on user’s input for Lmer,
-and a name describing the fomular.
-Prints out the input and the name</p>
-</dd></dl>
-
+<div class="section" id="pisa-analysis-tool-fomular-creator-module">
+<h2>pisa_analysis_tool.fomular_creator module<a class="headerlink" href="#pisa-analysis-tool-fomular-creator-module" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="module-pisa_analysis_tool.get_WDI_data">
 <span id="pisa-analysis-tool-get-wdi-data-module"></span><h2>pisa_analysis_tool.get_WDI_data module<a class="headerlink" href="#module-pisa_analysis_tool.get_WDI_data" title="Permalink to this headline">¶</a></h2>
@@ -197,7 +189,8 @@ Prints out the input and the name</p>
 </div>
 <div class="section" id="getting-world-bank-data-from-wbdata-pakcage">
 <h3>Getting World Bank data from wbdata pakcage<a class="headerlink" href="#getting-world-bank-data-from-wbdata-pakcage" title="Permalink to this headline">¶</a></h3>
-<p>This module searches the indicators in the World Bank data and get a dataframe accordingly.</p>
+<p>This module searches the indicators in the World Bank data and get a dataframe
+accordingly.</p>
 <dl class="function">
 <dt id="pisa_analysis_tool.get_WDI_data.WB_country_data">
 <code class="descclassname">pisa_analysis_tool.get_WDI_data.</code><code class="descname">WB_country_data</code><span class="sig-paren">(</span><em>indicator</em>, <em>start=2015</em>, <em>end=2015</em><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.get_WDI_data.WB_country_data" title="Permalink to this definition">¶</a></dt>
@@ -262,12 +255,15 @@ Prints out the input and the name</p>
 </div>
 <div class="section" id="fitting-and-plotting-multi-level-models">
 <h3>Fitting and plotting multi-level models<a class="headerlink" href="#fitting-and-plotting-multi-level-models" title="Permalink to this headline">¶</a></h3>
-<p>This module runs models through pymer4 package for the examplar inquiry, which is to
-investigate the school-level and country-level factors that predict students’ science
-performance in the PISA 2015 dataset, and mediate gender differences in science performance.
+<p>This module runs models through pymer4 package for the examplar inquiry,
+which is to investigate the school-level and country-level factors that predict
+students’ science
+performance in the PISA 2015 dataset, and mediate gender differences in science
+performance.
 Here each model category is exemplified with a selection of variables
 and we will show a demonstration of model fitting with regard to
-gender (female) and a group of other interested factors. The results show the model
+gender (female) and a group of other interested factors. The results show the
+model
 coefficients for each model.</p>
 <dl class="function">
 <dt id="pisa_analysis_tool.hlm_pymer4.fixed_effect_3level_model">
@@ -283,7 +279,8 @@ coefficients for each model.</p>
 </tr>
 </tbody>
 </table>
-<p>science, math, reading, and other five selected variables as predictors.
+<p>science, math, reading, and other five selected variables as
+predictors.
 :return: the model results</p>
 </div></blockquote>
 </dd></dl>
@@ -291,7 +288,8 @@ coefficients for each model.</p>
 <dl class="function">
 <dt id="pisa_analysis_tool.hlm_pymer4.fixeff_interaction_3level_model">
 <code class="descclassname">pisa_analysis_tool.hlm_pymer4.</code><code class="descname">fixeff_interaction_3level_model</code><span class="sig-paren">(</span><em>dataframe</em><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.hlm_pymer4.fixeff_interaction_3level_model" title="Permalink to this definition">¶</a></dt>
-<dd><p>Multi-level model_3_sci includes intercept, variables as fixed, and an interaction term.</p>
+<dd><p>Multi-level model_3_sci includes intercept, variables as fixed, and an
+interaction term.</p>
 <blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -302,7 +300,8 @@ coefficients for each model.</p>
 </tr>
 </tbody>
 </table>
-<p>science, math, reading, and other five selected variables as predictors.
+<p>science, math, reading, and other five selected variables as
+predictors.
 :return: the model results</p>
 </div></blockquote>
 </dd></dl>
@@ -310,17 +309,19 @@ coefficients for each model.</p>
 <dl class="function">
 <dt id="pisa_analysis_tool.hlm_pymer4.main">
 <code class="descclassname">pisa_analysis_tool.hlm_pymer4.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.hlm_pymer4.main" title="Permalink to this definition">¶</a></dt>
-<dd><p>Run the function of intercept-only model, gradually adding in predictors, and interactions, with
+<dd><p>Run the function of intercept-only model, gradually adding in predictors,
+and interactions, with
 focal interest variable of female and science outcome.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pisa_analysis_tool.hlm_pymer4.mixeff_interaction_3level_model">
 <code class="descclassname">pisa_analysis_tool.hlm_pymer4.</code><code class="descname">mixeff_interaction_3level_model</code><span class="sig-paren">(</span><em>dataframe</em><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.hlm_pymer4.mixeff_interaction_3level_model" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="docutils">
-<dt>Multi-level model_4_sci includes intercept, school resource as random, others as fixed including</dt>
-<dd><p class="first">interaction.</p>
-<blockquote class="last">
+<dd><p>Multi-level model_4_sci includes intercept, school resource as random,
+others as fixed including</p>
+<blockquote>
+<div><p>interaction.</p>
+<blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -330,20 +331,21 @@ focal interest variable of female and science outcome.</p>
 </tr>
 </tbody>
 </table>
-<p>science, math, reading, and other five selected variables as predictors.
+<p>science, math, reading, and other five selected variables as
+predictors.
 :return: the model results</p>
 </div></blockquote>
-</dd>
-</dl>
+</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pisa_analysis_tool.hlm_pymer4.mixeff_multinteraction2level_model">
 <code class="descclassname">pisa_analysis_tool.hlm_pymer4.</code><code class="descname">mixeff_multinteraction2level_model</code><span class="sig-paren">(</span><em>dataframe</em><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.hlm_pymer4.mixeff_multinteraction2level_model" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="docutils">
-<dt>Multi-level model_5_sci includes intercept, multiple interactions and fixed effects,</dt>
-<dd><p class="first">and setting ESCS as random on country level.</p>
-<blockquote class="last">
+<dd><p>Multi-level model_5_sci includes intercept, multiple interactions and
+fixed effects,</p>
+<blockquote>
+<div><p>and setting ESCS as random on country level.</p>
+<blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -353,41 +355,42 @@ focal interest variable of female and science outcome.</p>
 </tr>
 </tbody>
 </table>
-<p>science, math, reading, and other five selected variables as predictors.
+<p>science, math, reading, and other five selected variables as
+predictors.
 :return: the model results</p>
 </div></blockquote>
-</dd>
-</dl>
+</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pisa_analysis_tool.hlm_pymer4.model_sum_visual">
 <code class="descclassname">pisa_analysis_tool.hlm_pymer4.</code><code class="descname">model_sum_visual</code><span class="sig-paren">(</span><em>model_x_sci</em>, <em>predictor</em>, <em>outcome</em><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.hlm_pymer4.model_sum_visual" title="Permalink to this definition">¶</a></dt>
-<dd><p>A general function of plotting model results, including the coefficients with 95% confidence
-intervals, and cluster level estimates overlaid, as well as fit and residuals.</p>
+<dd><p>A general function of plotting model results, including the coefficients
+with 95% confidence
+intervals, and cluster level estimates overlaid, as well as fit and
+residuals.</p>
 <blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name" colspan="2">param model_x_sci:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">a list of lists of model results assigned to a name</td>
-</tr>
-<tr class="field-even field"><th class="field-name" colspan="2">param predictor:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">a string of predictor indicator</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">param outcome:</th><td class="field-body">a string of outcome variable</td>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">a list of lists of model results assigned to</td>
 </tr>
 </tbody>
 </table>
+<p>a name
+:param predictor: a string of predictor indicator
+:param outcome: a string of outcome variable</p>
 </div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pisa_analysis_tool.hlm_pymer4.random_effect_2level_model">
 <code class="descclassname">pisa_analysis_tool.hlm_pymer4.</code><code class="descname">random_effect_2level_model</code><span class="sig-paren">(</span><em>dataframe</em><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.hlm_pymer4.random_effect_2level_model" title="Permalink to this definition">¶</a></dt>
-<dd><p>Multi-level model_1_sci includes intercept, variable and the interaction term random on country
-level.</p>
+<dd><p>Multi-level model_1_sci includes intercept, variable as fixed and the
+interaction term
+random on country level.</p>
 <blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -398,7 +401,8 @@ level.</p>
 </tr>
 </tbody>
 </table>
-<p>science, math, reading, and other five selected variables as predictors.
+<p>science, math, reading, and other five selected variables as
+predictors.
 :return: the model results</p>
 </div></blockquote>
 </dd></dl>
@@ -406,7 +410,8 @@ level.</p>
 <dl class="function">
 <dt id="pisa_analysis_tool.hlm_pymer4.random_intercept_3level_model">
 <code class="descclassname">pisa_analysis_tool.hlm_pymer4.</code><code class="descname">random_intercept_3level_model</code><span class="sig-paren">(</span><em>dataframe</em><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.hlm_pymer4.random_intercept_3level_model" title="Permalink to this definition">¶</a></dt>
-<dd><p>Multi-level model_0_sci includes grand-mean intercept and setting outcome of log science
+<dd><p>Multi-level model_0_sci includes grand-mean intercept and setting outcome
+of log science
 scores as random.</p>
 <blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
@@ -418,7 +423,8 @@ scores as random.</p>
 </tr>
 </tbody>
 </table>
-<p>science, math, reading, and other five selected variables as predictors.
+<p>science, math, reading, and other five selected variables as
+predictors.
 :return: the model results</p>
 </div></blockquote>
 </dd></dl>
@@ -448,16 +454,101 @@ and generates a new output csv file</p>
 </dd></dl>
 
 </div>
-<div class="section" id="module-pisa_analysis_tool.plot_WDI">
-<span id="pisa-analysis-tool-plot-wdi-module"></span><h2>pisa_analysis_tool.plot_WDI module<a class="headerlink" href="#module-pisa_analysis_tool.plot_WDI" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="pisa_analysis_tool.plot_WDI.plot_indicators">
-<code class="descclassname">pisa_analysis_tool.plot_WDI.</code><code class="descname">plot_indicators</code><span class="sig-paren">(</span><em>country_list</em>, <em>indicator</em>, <em>start=2000</em>, <em>end=2015</em><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.plot_WDI.plot_indicators" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
+<div class="section" id="pisa-analysis-tool-plot-wdi-module">
+<h2>pisa_analysis_tool.plot_WDI module<a class="headerlink" href="#pisa-analysis-tool-plot-wdi-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="pisa-analysis-tool-students-info-helper-module">
-<h2>pisa_analysis_tool.students_info_helper module<a class="headerlink" href="#pisa-analysis-tool-students-info-helper-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-pisa_analysis_tool.students_info_helper">
+<span id="pisa-analysis-tool-students-info-helper-module"></span><h2>pisa_analysis_tool.students_info_helper module<a class="headerlink" href="#module-pisa_analysis_tool.students_info_helper" title="Permalink to this headline">¶</a></h2>
+<p>CSE583 Project
+get_student_info helper functions</p>
+<dl class="function">
+<dt id="pisa_analysis_tool.students_info_helper.extract_basic_df">
+<code class="descclassname">pisa_analysis_tool.students_info_helper.</code><code class="descname">extract_basic_df</code><span class="sig-paren">(</span><em>df</em>, <em>country_dict_df</em><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.students_info_helper.extract_basic_df" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes 2 dataframes df and country_dict_df, extract basic
+student information, returns a new dataframe</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pisa_analysis_tool.students_info_helper.info">
+<code class="descclassname">pisa_analysis_tool.students_info_helper.</code><code class="descname">info</code><span class="sig-paren">(</span><em>df</em>, <em>id_num</em><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.students_info_helper.info" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>df</strong> – the dataframe of ‘nations.csv’</li>
+<li><strong>id</strong> – the id of nation</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">a tuple - (string country name, string country</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>code, string continent)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pisa_analysis_tool.students_info_helper.infos">
+<code class="descclassname">pisa_analysis_tool.students_info_helper.</code><code class="descname">infos</code><span class="sig-paren">(</span><em>country_df</em>, <em>id_list</em><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.students_info_helper.infos" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>country_df</strong> – the dataframe of ‘nations.csv’</li>
+<li><strong>id_df</strong> – the dataframe of country id</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">a dataframe - (string country name, string</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>country code, string continent)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pisa_analysis_tool.students_info_helper.interface">
+<code class="descclassname">pisa_analysis_tool.students_info_helper.</code><code class="descname">interface</code><span class="sig-paren">(</span><em>df</em><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.students_info_helper.interface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes a dataframe as parameter, gets variable names
+and output file name, returns a list with the given
+variables</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pisa_analysis_tool.students_info_helper.sav_to_dataframe">
+<code class="descclassname">pisa_analysis_tool.students_info_helper.</code><code class="descname">sav_to_dataframe</code><span class="sig-paren">(</span><em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.students_info_helper.sav_to_dataframe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts a sav file to a pandas dataframe</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pisa_analysis_tool.students_info_helper.school2nation">
+<code class="descclassname">pisa_analysis_tool.students_info_helper.</code><code class="descname">school2nation</code><span class="sig-paren">(</span><em>id_num</em><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.students_info_helper.school2nation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes school id, returns nation id of the school.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pisa_analysis_tool.students_info_helper.student2nation">
+<code class="descclassname">pisa_analysis_tool.students_info_helper.</code><code class="descname">student2nation</code><span class="sig-paren">(</span><em>id_num</em><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.students_info_helper.student2nation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes student id, returns nation id of the student.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pisa_analysis_tool.students_info_helper.student2school">
+<code class="descclassname">pisa_analysis_tool.students_info_helper.</code><code class="descname">student2school</code><span class="sig-paren">(</span><em>df</em>, <em>id_num</em><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.students_info_helper.student2school" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes the ‘IDs_sorted_by_student.csv’ dataframe
+and student id, returns school id of the student.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pisa_analysis_tool.students_info_helper.student2school_helper">
+<code class="descclassname">pisa_analysis_tool.students_info_helper.</code><code class="descname">student2school_helper</code><span class="sig-paren">(</span><em>df</em>, <em>id_num</em>, <em>start</em>, <em>end</em><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.students_info_helper.student2school_helper" title="Permalink to this definition">¶</a></dt>
+<dd><p>student2school’s helper function</p>
+</dd></dl>
+
 </div>
 <div class="section" id="module-pisa_analysis_tool.version">
 <span id="pisa-analysis-tool-version-module"></span><h2>pisa_analysis_tool.version module<a class="headerlink" href="#module-pisa_analysis_tool.version" title="Permalink to this headline">¶</a></h2>
