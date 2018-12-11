@@ -27,8 +27,8 @@ install:
     - pip install coverage > /dev/null
     - pip install coveralls > /dev/null
     - pip install flake8 > /dev/null
-    - conda install -c conda-forge r r-base r-lmertest r-lsmeans rpy2
-    - pip install -r requirements.txt
+    - conda install -c conda-forge r r-base r-lmertest r-lsmeans rpy2 > /dev/null
+    - pip install -r requirements.txt > /dev/null
 
 
 # a list of commands to run before the main script
