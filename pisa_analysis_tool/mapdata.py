@@ -49,7 +49,7 @@ M1.choropleth(
     line_opacity=0.2,
     nan_fill_color='#8c8c8c',
     legend_name='Male Average Mathematics Score'
-) # Male Average Mathematics Score distribution layer
+)  # Male Average Mathematics Score distribution layer
 M1.choropleth(
     geo_data=COUNTRY_GEO,
     name='Male Average Science Score for Each Country',
@@ -61,7 +61,7 @@ M1.choropleth(
     line_opacity=0.2,
     nan_fill_color='#8c8c8c',
     legend_name='Male Average Science Score'
-) # Male Average Science Score distribution layer
+)  # Male Average Science Score distribution layer
 M1.choropleth(
     geo_data=COUNTRY_GEO,
     name='Male Average Reading Score for Each Country',
@@ -73,7 +73,7 @@ M1.choropleth(
     line_opacity=0.2,
     nan_fill_color='#8c8c8c',
     legend_name='Male Average Reading Score'
-) # Male Average Reading Score distribution layer
+)  # Male Average Reading Score distribution layer
 M1.choropleth(
     geo_data=COUNTRY_GEO,
     name='Female Average Mathematics Score for Each Country',
@@ -85,7 +85,7 @@ M1.choropleth(
     line_opacity=0.2,
     nan_fill_color='#8c8c8c',
     legend_name='Female Average Mathematics Score'
-) # Female Average Mathematics Score distribution layer
+)  # Female Average Mathematics Score distribution layer
 M1.choropleth(
     geo_data=COUNTRY_GEO,
     name='Female Average Science Score for Each Country',
@@ -97,7 +97,7 @@ M1.choropleth(
     line_opacity=0.2,
     nan_fill_color='#8c8c8c',
     legend_name='Female Average Science Score'
-) # Female Average Science Score distribution layer
+)  # Female Average Science Score distribution layer
 M1.choropleth(
     geo_data=COUNTRY_GEO,
     name='Female Average Reading Score for Each Country',
@@ -109,7 +109,7 @@ M1.choropleth(
     line_opacity=0.2,
     nan_fill_color='#8c8c8c',
     legend_name='Female Average Reading Score'
-) # Female Average Reading Score distribution layer
+)  # Female Average Reading Score distribution layer
 M1.choropleth(
     geo_data=COUNTRY_GEO,
     name='Countries\' indicator score',
@@ -121,7 +121,7 @@ M1.choropleth(
     line_opacity=0.2,
     nan_fill_color='#8c8c8c',
     legend_name='World Bank gender parity index(GPI)'
-) # World Bank gender parity index(GPI) layer
+)  # World Bank gender parity index(GPI) layer
 
 
 # add markers for each country in the csv file

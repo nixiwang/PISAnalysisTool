@@ -1,12 +1,12 @@
 import unittest
 import pandas as pd
 import os
-from pisa_analysis_tool.preprocessing import make_country_dict
-from pisa_analysis_tool.preprocessing import add_lat_long
-from pisa_analysis_tool.preprocessing import top_10_countries
-from pisa_analysis_tool.preprocessing import remove_country
-from pisa_analysis_tool.preprocessing import get_score
-from pisa_analysis_tool.preprocessing import sort_by_country_avg
+from pisa_analysis_tool.visual.preprocessing import make_country_dict
+from pisa_analysis_tool.visual.preprocessing import add_lat_long
+from pisa_analysis_tool.visual.preprocessing import top_10_countries
+from pisa_analysis_tool.visual.preprocessing import remove_country
+from pisa_analysis_tool.visual.preprocessing import get_score
+from pisa_analysis_tool.visual.preprocessing import sort_by_country_avg
 
 THIS_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -17,7 +17,7 @@ class UnitTests(unittest.TestCase):
     """
     SUBJECT_LST = ['Mathematics', 'Reading', 'Science']
     GEO_DATA = 'Copy of world_ogr.json'
-    LOCAL_DATA_PATH = './data/'
+    LOCAL_DATA_PATH = '../data/'
     WB_DATA = LOCAL_DATA_PATH + 'gender_coef.csv'
 
     male_path = LOCAL_DATA_PATH + 'world_score_male_avg.csv'
@@ -44,9 +44,12 @@ class UnitTests(unittest.TestCase):
         Test whether the program has save the files.
         """
         self.assertTrue(os.path.exists(self.LOCAL_DATA_PATH))
-        self.assertTrue(os.path.exists(self.LOCAL_DATA_PATH + 'world_score_male_avg.csv'))
-        self.assertTrue(os.path.exists(self.LOCAL_DATA_PATH + 'world_score_female_avg.csv'))
-        self.assertTrue(os.path.exists(self.LOCAL_DATA_PATH + 'world_score_avg.csv'))
+        self.assertTrue(os.path.exists(self.LOCAL_DATA_PATH +
+                                       'world_score_male_avg.csv'))
+        self.assertTrue(os.path.exists(self.LOCAL_DATA_PATH +
+                                       'world_score_female_avg.csv'))
+        self.assertTrue(os.path.exists(self.LOCAL_DATA_PATH +
+                                       'world_score_avg.csv'))
 
     def test_dataframe(self):
         """
@@ -76,6 +79,7 @@ class UnitTests(unittest.TestCase):
         self.assertTrue(len(self.df_female) == 69)
         self.assertTrue(len(self.df_count) == 69)
 
+
     def test_make_country_dict(self):
         """
         Test the Country dict has stored the countries' name with
@@ -87,32 +91,29 @@ class UnitTests(unittest.TestCase):
         self.assertTrue(country_dict.get('Brazil') == (-10.772, -53.089))
 
 
-
-
-
     def test_add_lat_long(self):
         """
         Test add_lat_long to check each country with its
         correct latitude and longitude coordinate.
         """
-        male_avg_dict, female_avg_dict, country_avg_dict = self.get_large_dict()
-        self.assertTrue(male_avg_dict['CountryName'][0] == 'Albania' and
-                        male_avg_dict['lat'][0] == 41.143)
+        m_avg_dict, f_avg_dict, c_avg_dict = self.get_large_dict()
+        self.assertTrue(m_avg_dict['CountryName'][0] == 'Albania' and
+                        m_avg_dict['lat'][0] == 41.143)
 
-        self.assertTrue(male_avg_dict['CountryName'][4] == 'Belgium' and
-                        male_avg_dict['lon'][4] == 4.664)
+        self.assertTrue(m_avg_dict['CountryName'][4] == 'Belgium' and
+                        m_avg_dict['lon'][4] == 4.664)
 
-        self.assertTrue(female_avg_dict['CountryName'][-1] == 'Uruguay' and
-                        female_avg_dict['lat'][-1] == -32.8)
+        self.assertTrue(f_avg_dict['CountryName'][-1] == 'Uruguay' and
+                        f_avg_dict['lat'][-1] == -32.8)
 
-        self.assertTrue(female_avg_dict['CountryName'][-2] == 'United States' and
-                        female_avg_dict['lon'][-2] == -98.606)
+        self.assertTrue(f_avg_dict['CountryName'][-2] == 'United States' and
+                        f_avg_dict['lon'][-2] == -98.606)
 
-        self.assertTrue(country_avg_dict['CountryName'][-3] == 'United Kingdom' and
+        self.assertTrue(c_avg_dict['CountryName'][-3] == 'United Kingdom' and
                         country_avg_dict['lat'][-3] == 53)
 
-        self.assertTrue(country_avg_dict['CountryName'][-3] == 'United Kingdom' and
-                        country_avg_dict['lon'][-3] == -1.6)
+        self.assertTrue(c_avg_dict['CountryName'][-3] == 'United Kingdom' and
+                        c_avg_dict['lon'][-3] == -1.6)
 
     def test_wb_data(self):
         """
@@ -141,8 +142,11 @@ class UnitTests(unittest.TestCase):
         df_wb = pd.read_csv(self.WB_DATA)
         country_dict = make_country_dict()
         _, country_lst = add_lat_long(self.male_path, country_dict)
-        needed_country = remove_country(self.WB_DATA, country_dict, country_lst)
-        self.assertTrue(list(needed_country['CountryName'])[28] in list(df_wb['CountryName']))
+        needed_country = remove_country(self.WB_DATA,
+                                        country_dict, country_lst)
+
+        self.assertTrue(list(needed_country['CountryName'])[28] in
+                        list(df_wb['CountryName']))
 
     def test_sort_by_country_avg(self):
         """
@@ -151,17 +155,19 @@ class UnitTests(unittest.TestCase):
         values. For the last two dictionaries, the values are in a
         descending order.
         """
-        male_avg_dict, female_avg_dict, country_avg_dict = self.get_large_dict()
-        df_male = pd.DataFrame.from_dict(male_avg_dict)
-        df_female = pd.DataFrame.from_dict(female_avg_dict)
-        df_country_avg = pd.DataFrame.from_dict(country_avg_dict)
+        m_avg_dict, f_avg_dict, c_avg_dict = self.get_large_dict()
+        df_male = pd.DataFrame.from_dict(m_avg_dict)
+        df_female = pd.DataFrame.from_dict(f_avg_dict)
+        df_country_avg = pd.DataFrame.from_dict(c_avg_dict)
         male_res, female_res = get_score(df_male, df_female, 'Science')
         sub_res, m_sub_res, f_sub_res = sort_by_country_avg(df_country_avg,
                                                             'Science',
                                                             male_res,
                                                             female_res)
-        self.assertTrue(list(m_sub_res.values())[0] >= list(m_sub_res.values())[1])
-        self.assertTrue(list(f_sub_res.values())[0] >= list(f_sub_res.values())[1])
+        self.assertTrue(list(m_sub_res.values())[0] >=
+                        list(m_sub_res.values())[1])
+        self.assertTrue(list(f_sub_res.values())[0] >=
+                        list(f_sub_res.values())[1])
         self.assertTrue(len(sub_res) == 4)
 
 
