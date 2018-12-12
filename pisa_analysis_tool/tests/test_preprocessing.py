@@ -123,20 +123,20 @@ class UnitTests(unittest.TestCase):
     #     self.assertTrue(len(df_wb) == 182)
     #     self.assertTrue(df_wb['indicator'].min() > 0)
 
-    def test_remove_country(self):
-        """
-        Test remove_country in preprocessing to check that
-        whether we have extracted the countries only have
-        record in wb data.
-        """
-        df_wb = pd.read_csv(self.WB_DATA)
-        country_dict = make_country_dict()
-        _, country_lst = add_lat_long(self.MALE_PATH, country_dict)
-        needed_country = remove_country(self.WB_DATA,
-                                        country_dict, country_lst)
-
-        self.assertTrue(list(needed_country['CountryName'])[28] in
-                        list(df_wb['CountryName']))
+    # def test_remove_country(self):
+    #     """
+    #     Test remove_country in preprocessing to check that
+    #     whether we have extracted the countries only have
+    #     record in wb data.
+    #     """
+    #     df_wb = pd.read_csv(self.WB_DATA)
+    #     country_dict = make_country_dict()
+    #     _, country_lst = add_lat_long(self.MALE_PATH, country_dict)
+    #     needed_country = remove_country(self.WB_DATA,
+    #                                     country_dict, country_lst)
+    #
+    #     self.assertTrue(list(needed_country['CountryName'])[28] in
+    #                     list(df_wb['CountryName']))
 
     # def test_sort_by_country_avg(self):
     #     """
