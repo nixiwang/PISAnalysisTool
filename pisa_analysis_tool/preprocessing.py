@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
 import csv
-from operator import itemgetter
 import datetime
 import wbdata
 import json
@@ -177,9 +176,9 @@ def sort_by_country_avg(df_count, subject, m_res, f_res):
     :return: 3 dictionaries
     """
     df_ctry_subj = df_count[['CountryName', subject]]
-    df_ctry_subj_avg_sorted = df_ctry_subj.sort_values(df_ctry_subj.columns[-1],
+    df_ctry_subj_avg_s = df_ctry_subj.sort_values(df_ctry_subj.columns[-1],
                                                        ascending=False)
-    ctry_subj_avg_lst = df_ctry_subj_avg_sorted.to_dict('split')['data']
+    ctry_subj_avg_lst = df_ctry_subj_avg_s.to_dict('split')['data']
     lst_25 = []
     lst_25_male = []
     lst_25_female = []
