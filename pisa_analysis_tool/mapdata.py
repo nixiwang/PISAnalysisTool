@@ -9,14 +9,14 @@ from preprocessing import make_country_dict, add_lat_long, remove_country
 
 
 # json file with countries' name and their geographical data
-COUNTRY_GEO = '../data/world_ogr.json'
+COUNTRY_GEO = './data/visual_data/world_ogr.json'
 # gender coefficient data for countries
-GENDER_COEFF = '../data/gender_coef.csv'
+GENDER_COEFF = './data/visual_data/gender_coef.csv'
 
 # preprocessing raw data
-F_AVG_CSV = '../data/world_score_female_avg.csv'
-M_AVG_CSV = '../data/world_score_male_avg.csv'
-C_AVG_CSV = '../data/world_score_avg.csv'
+F_AVG_CSV = './data/visual_data/world_score_female_avg.csv'
+M_AVG_CSV = './data/visual_data/world_score_male_avg.csv'
+C_AVG_CSV = './data/visual_data/world_score_avg.csv'
 
 COUNTRY_DICT = make_country_dict()
 

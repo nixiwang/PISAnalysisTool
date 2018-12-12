@@ -15,9 +15,9 @@ from preprocessing import make_country_dict, \
                           add_lat_long, pd, \
                           get_score, sort_by_country_avg
 
-F_AVG_CSV = '../data/world_score_female_avg.csv'
-M_AVG_CSV = '../data/world_score_male_avg.csv'
-COUNTRY_AVG_CSV = '../data/world_score_avg.csv'
+F_AVG_CSV = './data/visual_data/world_score_female_avg.csv'
+M_AVG_CSV = './data/visual_data/world_score_male_avg.csv'
+COUNTRY_AVG_CSV = './data/visual_data/world_score_avg.csv'
 
 COUNTRY_DICT = make_country_dict()
 

@@ -12,9 +12,9 @@ import numpy as np
 import wbdata
 
 
-FILE_DIR = '../data/student_info.csv'
+FILE_DIR = './data/visual_data/student_info.csv'
 SUBJECT_LST = ['Mathematics', 'Reading', 'Science']
-GEO_DATA = '../data/world_ogr.json'
+GEO_DATA = './data/visual_data/world_ogr.json'
 
 
 def preprocessing():
@@ -31,15 +31,15 @@ def preprocessing():
                     'StudentID', 'CountryID'],
                    axis=1, inplace=True)
     df_avg = df_origin.groupby('CountryName').mean()
-    df_avg.to_csv('../data/world_score_avg.csv')
+    df_avg.to_csv('./data/visual_data/world_score_avg.csv')
 
     df_male = df_origin[df_origin['Gender'] == 'Male']
     df_male_avg = df_male.groupby('CountryName').mean()
-    df_male_avg.to_csv('../data/world_score_male_avg.csv')
+    df_male_avg.to_csv('./data/visual_data/world_score_male_avg.csv')
 
     df_female = df_origin[df_origin['Gender'] == 'Female']
     df_female_avg = df_female.groupby('CountryName').mean()
-    df_female_avg.to_csv('../data/world_score_female_avg.csv')
+    df_female_avg.to_csv('./data/visual_data/world_score_female_avg.csv')
 
 
 def add_lat_long(filedir, country_dict):
