@@ -6,6 +6,16 @@ from pisa_analysis_tool.get_WDI_data import country_data
 
 
 def plot_indicators(country_list, indicator, start=2000, end=2015):
+    """
+    A grand function that takes as input a list of country codes, then uses
+    our function above WB_country_data to get a list of indicators for each
+    country,then plot a line diagram.
+    :param country_list: a list of strings of country code
+    :param indicator: indicator index from wbdata
+    :param start: start of the year
+    :param end: end of the year
+    :return: a plot
+    """
     import matplotlib.pyplot as plt
     import seaborn as sns
     import wbdata
