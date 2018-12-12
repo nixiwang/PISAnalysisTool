@@ -1,12 +1,12 @@
 import unittest
 import pandas as pd
 import os
-from pisa_analysis_tool.visual.preprocessing import make_country_dict
-from pisa_analysis_tool.visual.preprocessing import add_lat_long
-from pisa_analysis_tool.visual.preprocessing import top_10_countries
-from pisa_analysis_tool.visual.preprocessing import remove_country
-from pisa_analysis_tool.visual.preprocessing import get_score
-from pisa_analysis_tool.visual.preprocessing import sort_by_country_avg
+from pisa_analysis_tool.preprocessing import make_country_dict
+from pisa_analysis_tool.preprocessing import add_lat_long
+from pisa_analysis_tool.preprocessing import top_10_countries
+from pisa_analysis_tool.preprocessing import remove_country
+from pisa_analysis_tool.preprocessing import get_score
+from pisa_analysis_tool.preprocessing import sort_by_country_avg
 
 THIS_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -17,7 +17,7 @@ class UnitTests(unittest.TestCase):
     """
     SUBJECT_LST = ['Mathematics', 'Reading', 'Science']
     GEO_DATA = 'Copy of world_ogr.json'
-    LOCAL_DATA_PATH = '../data/'
+    LOCAL_DATA_PATH = './data/'
     WB_DATA = LOCAL_DATA_PATH + 'gender_coef.csv'
 
     male_path = LOCAL_DATA_PATH + 'world_score_male_avg.csv'
