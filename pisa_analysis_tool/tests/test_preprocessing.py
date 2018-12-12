@@ -9,7 +9,6 @@ import pandas as pd
 import os
 from pisa_analysis_tool.preprocessing import make_country_dict
 from pisa_analysis_tool.preprocessing import add_lat_long
-from pisa_analysis_tool.preprocessing import remove_country
 from pisa_analysis_tool.preprocessing import get_score
 from pisa_analysis_tool.preprocessing import sort_by_country_avg
 
