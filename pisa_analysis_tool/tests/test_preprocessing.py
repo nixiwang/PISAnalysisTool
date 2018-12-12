@@ -1,3 +1,9 @@
+"""
+Created on Sat Dec 8 21:37:27 2018
+
+@author: Shenghao Xie
+Test module for functions in preprocessing.
+"""
 import unittest
 import pandas as pd
 import os

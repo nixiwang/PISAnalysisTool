@@ -66,7 +66,7 @@ def add_lat_long(filedir, country_dict):
         for row in csv_reader:
             # print(filedir)
             c_name = row[0]
-            if filedir == '../data/world_score_male_avg.csv':
+            if filedir == './data/visual_data/world_score_male_avg.csv':
                 country_lst.append(c_name)
             m_score = row[1]
             r_score = row[2]
@@ -101,7 +101,7 @@ def wb_country_data(indicator, start=2015, end=2015):
     df_wb['CountryName'] = df_wb.index
     df_wb = df_wb.reset_index(drop=True)
     df_wb = df_wb.dropna()
-    df_wb.to_csv('../data/gender_coef.csv')
+    df_wb.to_csv('./data/visual_data/gender_coef.csv')
     return df_wb
 
 
