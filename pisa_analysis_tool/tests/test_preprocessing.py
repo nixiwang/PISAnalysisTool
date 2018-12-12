@@ -19,7 +19,7 @@ class UnitTests(unittest.TestCase):
     This class is to run all the tests based on preprocessing.
     """
     SUBJECT_LST = ['Mathematics', 'Reading', 'Science']
-    GEO_DATA = 'Copy of world_ogr.json'
+    GEO_DATA = 'world_ogr.json'
     LOCAL_DATA_PATH = '../data/visual_data/'
     WB_DATA = LOCAL_DATA_PATH + 'gender_coef.csv'
 
