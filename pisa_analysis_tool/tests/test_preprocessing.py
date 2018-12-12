@@ -22,13 +22,13 @@ class UnitTests(unittest.TestCase):
     LOCAL_DATA_PATH = '../data/visual_data/'
     WB_DATA = LOCAL_DATA_PATH + 'gender_coef.csv'
 
-    male_path = LOCAL_DATA_PATH + 'world_score_male_avg.csv'
-    female_path = LOCAL_DATA_PATH + 'world_score_female_avg.csv'
-    count_path = LOCAL_DATA_PATH + 'world_score_avg.csv'
+    MALE_PATH = LOCAL_DATA_PATH + 'world_score_male_avg.csv'
+    FEMALE_PATH = LOCAL_DATA_PATH + 'world_score_female_avg.csv'
+    COUNT_PATH = LOCAL_DATA_PATH + 'world_score_avg.csv'
 
-    df_male = pd.read_csv(male_path)
-    df_female = pd.read_csv(female_path)
-    df_count = pd.read_csv(count_path)
+    DF_MALE = pd.read_csv(MALE_PATH)
+    DF_FEMALE = pd.read_csv(FEMALE_PATH)
+    DF_COUNT = pd.read_csv(COUNT_PATH)
 
     def get_large_dict(self):
         """
@@ -36,9 +36,9 @@ class UnitTests(unittest.TestCase):
         """
         country_dict = make_country_dict()
 
-        male_avg_dict, _ = add_lat_long(self.male_path, country_dict)
-        female_avg_dict, _ = add_lat_long(self.female_path, country_dict)
-        country_avg_dict, _ = add_lat_long(self.count_path, country_dict)
+        male_avg_dict, _ = add_lat_long(self.MALE_PATH, country_dict)
+        female_avg_dict, _ = add_lat_long(self.FEMALE_PATH, country_dict)
+        country_avg_dict, _ = add_lat_long(self.COUNT_PATH, country_dict)
         return male_avg_dict, female_avg_dict, country_avg_dict
 
     # def test_preprocessing(self):
@@ -57,29 +57,29 @@ class UnitTests(unittest.TestCase):
     #     """
     #     Test whether the csv file has correct columns
     #     """
-    #     self.assertFalse('WEALTH' in self.df_male.columns)
-    #     self.assertFalse('StudentID' in self.df_female.columns)
-    #     self.assertFalse('CountryID' in self.df_count.columns)
+    #     self.assertFalse('WEALTH' in self.DF_MALE.columns)
+    #     self.assertFalse('StudentID' in self.DF_FEMALE.columns)
+    #     self.assertFalse('CountryID' in self.DF_COUNT.columns)
     #
-    #     self.assertTrue('CountryName' in self.df_female.columns)
-    #     self.assertTrue('CountryName' in self.df_male.columns)
-    #     self.assertTrue('CountryName' in self.df_count.columns)
+    #     self.assertTrue('CountryName' in self.DF_FEMALE.columns)
+    #     self.assertTrue('CountryName' in self.DF_MALE.columns)
+    #     self.assertTrue('CountryName' in self.DF_COUNT.columns)
     #
-    #     self.assertTrue('Mathematics' in self.df_female.columns)
-    #     self.assertTrue('Mathematics' in self.df_male.columns)
-    #     self.assertTrue('Mathematics' in self.df_count.columns)
+    #     self.assertTrue('Mathematics' in self.DF_FEMALE.columns)
+    #     self.assertTrue('Mathematics' in self.DF_MALE.columns)
+    #     self.assertTrue('Mathematics' in self.DF_COUNT.columns)
     #
-    #     self.assertTrue('Reading' in self.df_female.columns)
-    #     self.assertTrue('Reading' in self.df_male.columns)
-    #     self.assertTrue('Reading' in self.df_count.columns)
+    #     self.assertTrue('Reading' in self.DF_FEMALE.columns)
+    #     self.assertTrue('Reading' in self.DF_MALE.columns)
+    #     self.assertTrue('Reading' in self.DF_COUNT.columns)
     #
-    #     self.assertTrue('Science' in self.df_female.columns)
-    #     self.assertTrue('Science' in self.df_male.columns)
-    #     self.assertTrue('Science' in self.df_count.columns)
+    #     self.assertTrue('Science' in self.DF_FEMALE.columns)
+    #     self.assertTrue('Science' in self.DF_MALE.columns)
+    #     self.assertTrue('Science' in self.DF_COUNT.columns)
     #
-    #     self.assertTrue(len(self.df_male) == 69)
-    #     self.assertTrue(len(self.df_female) == 69)
-    #     self.assertTrue(len(self.df_count) == 69)
+    #     self.assertTrue(len(self.DF_MALE) == 69)
+    #     self.assertTrue(len(self.DF_FEMALE) == 69)
+    #     self.assertTrue(len(self.DF_COUNT) == 69)
     #
     # def test_make_country_dict(self):
     #     """
@@ -91,37 +91,37 @@ class UnitTests(unittest.TestCase):
     #     self.assertTrue('Algeria' in country_dict.keys())
     #     self.assertTrue(country_dict.get('Brazil') == (-10.772, -53.089))
     #
-    # def test_add_lat_long(self):
-    #     """
-    #     Test add_lat_long to check each country with its
-    #     correct latitude and longitude coordinate.
-    #     """
-    #     m_avg_dict, f_avg_dict, c_avg_dict = self.get_large_dict()
-    #     self.assertTrue(m_avg_dict['CountryName'][0] == 'Albania' and
-    #                     m_avg_dict['lat'][0] == 41.143)
-    #
-    #     self.assertTrue(m_avg_dict['CountryName'][4] == 'Belgium' and
-    #                     m_avg_dict['lon'][4] == 4.664)
-    #
-    #     self.assertTrue(f_avg_dict['CountryName'][-1] == 'Uruguay' and
-    #                     f_avg_dict['lat'][-1] == -32.8)
-    #
-    #     self.assertTrue(f_avg_dict['CountryName'][-2] == 'United States' and
-    #                     f_avg_dict['lon'][-2] == -98.606)
-    #
-    #     self.assertTrue(c_avg_dict['CountryName'][-3] == 'United Kingdom' and
-    #                     c_avg_dict['lat'][-3] == 53)
-    #
-    #     self.assertTrue(c_avg_dict['CountryName'][-3] == 'United Kingdom' and
-    #                     c_avg_dict['lon'][-3] == -1.6)
-    #
-    def test_wb_data(self):
+    def test_add_lat_long(self):
         """
-        Test the world bank data is correct.
+        Test add_lat_long to check each country with its
+        correct latitude and longitude coordinate.
         """
-        df_wb = pd.read_csv(self.WB_DATA)
-        self.assertTrue(len(df_wb) == 182)
-        self.assertTrue(df_wb['indicator'].min() > 0)
+        m_avg_dict, f_avg_dict, c_avg_dict = self.get_large_dict()
+        self.assertTrue(m_avg_dict['CountryName'][0] == 'Albania' and
+                        m_avg_dict['lat'][0] == 41.143)
+
+        self.assertTrue(m_avg_dict['CountryName'][4] == 'Belgium' and
+                        m_avg_dict['lon'][4] == 4.664)
+
+        self.assertTrue(f_avg_dict['CountryName'][-1] == 'Uruguay' and
+                        f_avg_dict['lat'][-1] == -32.8)
+
+        self.assertTrue(f_avg_dict['CountryName'][-2] == 'United States' and
+                        f_avg_dict['lon'][-2] == -98.606)
+
+        self.assertTrue(c_avg_dict['CountryName'][-3] == 'United Kingdom' and
+                        c_avg_dict['lat'][-3] == 53)
+
+        self.assertTrue(c_avg_dict['CountryName'][-3] == 'United Kingdom' and
+                        c_avg_dict['lon'][-3] == -1.6)
+    #
+    # def test_wb_data(self):
+    #     """
+    #     Test the world bank data is correct.
+    #     """
+    #     df_wb = pd.read_csv(self.WB_DATA)
+    #     self.assertTrue(len(df_wb) == 182)
+    #     self.assertTrue(df_wb['indicator'].min() > 0)
 
     def test_remove_country(self):
         """
@@ -131,7 +131,7 @@ class UnitTests(unittest.TestCase):
         """
         df_wb = pd.read_csv(self.WB_DATA)
         country_dict = make_country_dict()
-        _, country_lst = add_lat_long(self.male_path, country_dict)
+        _, country_lst = add_lat_long(self.MALE_PATH, country_dict)
         needed_country = remove_country(self.WB_DATA,
                                         country_dict, country_lst)
 
@@ -146,18 +146,16 @@ class UnitTests(unittest.TestCase):
     #     descending order.
     #     """
     #     m_avg_dict, f_avg_dict, c_avg_dict = self.get_large_dict()
-    #     df_male = pd.DataFrame.from_dict(m_avg_dict)
-    #     df_female = pd.DataFrame.from_dict(f_avg_dict)
-    #     df_country_avg = pd.DataFrame.from_dict(c_avg_dict)
-    #     male_res, female_res = get_score(df_male, df_female, 'Science')
-    #     sub_res, m_sub_res, f_sub_res = sort_by_country_avg(df_country_avg,
+    #     DF_MALE = pd.DataFrame.from_dict(m_avg_dict)
+    #     DF_FEMALE = pd.DataFrame.from_dict(f_avg_dict)
+    #     DF_COUNTry_avg = pd.DataFrame.from_dict(c_avg_dict)
+    #     male_res, female_res = get_score(DF_MALE, DF_FEMALE, 'Science')
+    #     sub_res, m_sub_res, f_sub_res = sort_by_country_avg(DF_COUNTry_avg,
     #                                                         'Science',
     #                                                         male_res,
     #                                                         female_res)
-    #     self.assertTrue(list(m_sub_res.values())[0] >=
-    #                     list(m_sub_res.values())[1])
-    #     self.assertTrue(list(f_sub_res.values())[0] >=
-    #                     list(f_sub_res.values())[1])
+    #     self.assertTrue(list(m_sub_res.values())[0] >= list(m_sub_res.values())[1])
+    #     self.assertTrue(list(f_sub_res.values())[0] >= list(f_sub_res.values())[1])
     #     self.assertTrue(len(sub_res) == 4)
 
 
