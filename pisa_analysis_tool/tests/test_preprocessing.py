@@ -115,14 +115,14 @@ class UnitTests(unittest.TestCase):
     #     self.assertTrue(c_avg_dict['CountryName'][-3] == 'United Kingdom' and
     #                     c_avg_dict['lon'][-3] == -1.6)
     #
-    # def test_wb_data(self):
-    #     """
-    #     Test the world bank data is correct.
-    #     """
-    #     df_wb = pd.read_csv(self.WB_DATA)
-    #     self.assertTrue(len(df_wb) == 182)
-    #     self.assertTrue(df_wb['indicator'].min() > 0)
-    #
+    def test_wb_data(self):
+        """
+        Test the world bank data is correct.
+        """
+        df_wb = pd.read_csv(self.WB_DATA)
+        self.assertTrue(len(df_wb) == 182)
+        self.assertTrue(df_wb['indicator'].min() > 0)
+
     def test_remove_country(self):
         """
         Test remove_country in preprocessing to check that
