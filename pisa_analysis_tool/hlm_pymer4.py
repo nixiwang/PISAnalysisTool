@@ -245,14 +245,6 @@ def mixeff_multinteraction2level_model(dataframe):
     return model_5_sci
 
 
-# Model fit
-# BIC change (of main effects combined M0 to M1
-# BIC change (of main effects combined M1 to M2
-# Using a likelihood ratio test (LRT) to test the difference between
-# any two models
-# Calculate the change in approximate variance explained (approximate R2) M0
-# to M1, to M2.
-
 #####################
 # Visualizing results
 # -------------------

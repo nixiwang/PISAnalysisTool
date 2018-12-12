@@ -104,8 +104,6 @@ def main():
         predictors.
         :return: two csv files, one with complete data, one with subsetted data
     """
-    # df = pd.read_csv("data/student_info.csv", encoding='latin-1',
-    # na_values=['', ' '])
     df = data_cleaning("data/student_info.csv")
     sample_df = small_sample(df)
     sample_df.to_csv('sample data.csv', encoding='utf-8')
