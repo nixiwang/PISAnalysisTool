@@ -16,7 +16,7 @@ class UnitTests(unittest.TestCase):
     """
     SUBJECT_LST = ['Mathematics', 'Reading', 'Science']
     GEO_DATA = 'Copy of world_ogr.json'
-    LOCAL_DATA_PATH = './data/'
+    LOCAL_DATA_PATH = './data/visualization data/'
     WB_DATA = LOCAL_DATA_PATH + 'gender_coef.csv'
 
     male_path = LOCAL_DATA_PATH + 'world_score_male_avg.csv'
