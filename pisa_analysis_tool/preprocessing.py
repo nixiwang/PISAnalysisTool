@@ -12,9 +12,13 @@ import numpy as np
 import wbdata
 
 
-FILE_DIR = './data/visual_data/student_info.csv'
+THIS_DIR = os.path.dirname(os.path.abspath(__file__))
+
+
+
+FILE_DIR = os.path.join(THIS_DIR, 'data/visual_data/student_info.csv')
 SUBJECT_LST = ['Mathematics', 'Reading', 'Science']
-GEO_DATA = './data/visual_data/world_ogr.json'
+GEO_DATA = os.path.join(THIS_DIR, 'data/visual_data/world_ogr.json')
 
 
 def preprocessing():

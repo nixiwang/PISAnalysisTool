@@ -22,9 +22,12 @@ class UnitTests(unittest.TestCase):
     SUBJECT_LST = ['Mathematics', 'Reading', 'Science']
 
     WB_DATA = 'gender_coef.csv'
-    MALE_PATH = 'world_score_male_avg.csv'
-    FEMALE_PATH = 'world_score_female_avg.csv'
-    COUNT_PATH = 'world_score_avg.csv'
+    MALE_PATH = os.path.join(THIS_DIR, os.pardir,
+                         'data/visual_data/world_score_male_avg.csv')
+    FEMALE_PATH = os.path.join(THIS_DIR, os.pardir,
+                         'data/visual_data/world_score_female_avg.csv')
+    COUNT_PATH = os.path.join(THIS_DIR, os.pardir,
+                         'data/visual_data/world_score_avg.csv')
 
     DF_MALE = pd.read_csv(MALE_PATH)
     DF_FEMALE = pd.read_csv(FEMALE_PATH)
