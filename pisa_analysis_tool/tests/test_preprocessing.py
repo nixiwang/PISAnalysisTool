@@ -123,42 +123,42 @@ class UnitTests(unittest.TestCase):
     #     self.assertTrue(len(df_wb) == 182)
     #     self.assertTrue(df_wb['indicator'].min() > 0)
     #
-    # def test_remove_country(self):
-    #     """
-    #     Test remove_country in preprocessing to check that
-    #     whether we have extracted the countries only have
-    #     record in wb data.
-    #     """
-    #     df_wb = pd.read_csv(self.WB_DATA)
-    #     country_dict = make_country_dict()
-    #     _, country_lst = add_lat_long(self.male_path, country_dict)
-    #     needed_country = remove_country(self.WB_DATA,
-    #                                     country_dict, country_lst)
-    #
-    #     self.assertTrue(list(needed_country['CountryName'])[28] in
-    #                     list(df_wb['CountryName']))
+    def test_remove_country(self):
+        """
+        Test remove_country in preprocessing to check that
+        whether we have extracted the countries only have
+        record in wb data.
+        """
+        df_wb = pd.read_csv(self.WB_DATA)
+        country_dict = make_country_dict()
+        _, country_lst = add_lat_long(self.male_path, country_dict)
+        needed_country = remove_country(self.WB_DATA,
+                                        country_dict, country_lst)
 
-    def test_sort_by_country_avg(self):
-        """
-        Test sort_by_country_avg funtion. This function returns three
-        dictionaries, all of them should have four keys with four
-        values. For the last two dictionaries, the values are in a
-        descending order.
-        """
-        m_avg_dict, f_avg_dict, c_avg_dict = self.get_large_dict()
-        df_male = pd.DataFrame.from_dict(m_avg_dict)
-        df_female = pd.DataFrame.from_dict(f_avg_dict)
-        df_country_avg = pd.DataFrame.from_dict(c_avg_dict)
-        male_res, female_res = get_score(df_male, df_female, 'Science')
-        sub_res, m_sub_res, f_sub_res = sort_by_country_avg(df_country_avg,
-                                                            'Science',
-                                                            male_res,
-                                                            female_res)
-        self.assertTrue(list(m_sub_res.values())[0] >=
-                        list(m_sub_res.values())[1])
-        self.assertTrue(list(f_sub_res.values())[0] >=
-                        list(f_sub_res.values())[1])
-        self.assertTrue(len(sub_res) == 4)
+        self.assertTrue(list(needed_country['CountryName'])[28] in
+                        list(df_wb['CountryName']))
+
+    # def test_sort_by_country_avg(self):
+    #     """
+    #     Test sort_by_country_avg funtion. This function returns three
+    #     dictionaries, all of them should have four keys with four
+    #     values. For the last two dictionaries, the values are in a
+    #     descending order.
+    #     """
+    #     m_avg_dict, f_avg_dict, c_avg_dict = self.get_large_dict()
+    #     df_male = pd.DataFrame.from_dict(m_avg_dict)
+    #     df_female = pd.DataFrame.from_dict(f_avg_dict)
+    #     df_country_avg = pd.DataFrame.from_dict(c_avg_dict)
+    #     male_res, female_res = get_score(df_male, df_female, 'Science')
+    #     sub_res, m_sub_res, f_sub_res = sort_by_country_avg(df_country_avg,
+    #                                                         'Science',
+    #                                                         male_res,
+    #                                                         female_res)
+    #     self.assertTrue(list(m_sub_res.values())[0] >=
+    #                     list(m_sub_res.values())[1])
+    #     self.assertTrue(list(f_sub_res.values())[0] >=
+    #                     list(f_sub_res.values())[1])
+    #     self.assertTrue(len(sub_res) == 4)
 
 
 if __name__ == '__main__':
