@@ -95,29 +95,29 @@ class UnitTests(unittest.TestCase):
     #     self.assertTrue('Algeria' in country_dict.keys())
     #     self.assertTrue(country_dict.get('Brazil') == (-10.772, -53.089))
     #
-    def test_add_lat_long(self):
-        """
-        Test add_lat_long to check each country with its
-        correct latitude and longitude coordinate.
-        """
-        m_avg_dict, f_avg_dict, c_avg_dict = self.get_large_dict()
-        self.assertTrue(m_avg_dict['CountryName'][0] == 'Albania' and
-                        m_avg_dict['lat'][0] == 41.143)
-
-        self.assertTrue(m_avg_dict['CountryName'][4] == 'Belgium' and
-                        m_avg_dict['lon'][4] == 4.664)
-
-        self.assertTrue(f_avg_dict['CountryName'][-1] == 'Uruguay' and
-                        f_avg_dict['lat'][-1] == -32.8)
-
-        self.assertTrue(f_avg_dict['CountryName'][-2] == 'United States' and
-                        f_avg_dict['lon'][-2] == -98.606)
-
-        self.assertTrue(c_avg_dict['CountryName'][-3] == 'United Kingdom' and
-                        c_avg_dict['lat'][-3] == 53)
-
-        self.assertTrue(c_avg_dict['CountryName'][-3] == 'United Kingdom' and
-                        c_avg_dict['lon'][-3] == -1.6)
+    # def test_add_lat_long(self):
+    #     """
+    #     Test add_lat_long to check each country with its
+    #     correct latitude and longitude coordinate.
+    #     """
+    #     m_avg_dict, f_avg_dict, c_avg_dict = self.get_large_dict()
+    #     self.assertTrue(m_avg_dict['CountryName'][0] == 'Albania' and
+    #                     m_avg_dict['lat'][0] == 41.143)
+    #
+    #     self.assertTrue(m_avg_dict['CountryName'][4] == 'Belgium' and
+    #                     m_avg_dict['lon'][4] == 4.664)
+    #
+    #     self.assertTrue(f_avg_dict['CountryName'][-1] == 'Uruguay' and
+    #                     f_avg_dict['lat'][-1] == -32.8)
+    #
+    #     self.assertTrue(f_avg_dict['CountryName'][-2] == 'United States' and
+    #                     f_avg_dict['lon'][-2] == -98.606)
+    #
+    #     self.assertTrue(c_avg_dict['CountryName'][-3] == 'United Kingdom' and
+    #                     c_avg_dict['lat'][-3] == 53)
+    #
+    #     self.assertTrue(c_avg_dict['CountryName'][-3] == 'United Kingdom' and
+    #                     c_avg_dict['lon'][-3] == -1.6)
     #
     # def test_wb_data(self):
     #     """
@@ -127,20 +127,20 @@ class UnitTests(unittest.TestCase):
     #     self.assertTrue(len(df_wb) == 182)
     #     self.assertTrue(df_wb['indicator'].min() > 0)
 
-    # def test_remove_country(self):
-    #     """
-    #     Test remove_country in preprocessing to check that
-    #     whether we have extracted the countries only have
-    #     record in wb data.
-    #     """
-    #     df_wb = pd.read_csv(self.WB_DATA)
-    #     country_dict = make_country_dict()
-    #     _, country_lst = add_lat_long(self.MALE_PATH, country_dict)
-    #     needed_country = remove_country(self.WB_DATA,
-    #                                     country_dict, country_lst)
-    #
-    #     self.assertTrue(list(needed_country['CountryName'])[28] in
-    #                     list(df_wb['CountryName']))
+    def test_remove_country(self):
+        """
+        Test remove_country in preprocessing to check that
+        whether we have extracted the countries only have
+        record in wb data.
+        """
+        df_wb = pd.read_csv(self.WB_DATA)
+        country_dict = make_country_dict()
+        _, country_lst = add_lat_long(self.MALE_PATH, country_dict)
+        needed_country = remove_country(self.WB_DATA,
+                                        country_dict, country_lst)
+
+        self.assertTrue(list(needed_country['CountryName'])[28] in
+                        list(df_wb['CountryName']))
 
     # def test_sort_by_country_avg(self):
     #     """
