@@ -12,9 +12,9 @@ from bokeh.layouts import gridplot
 from bokeh.models.widgets import Tabs
 from preprocessing import make_country_dict, add_lat_long, np, pd
 
-F_AVG_CSV = '../../data/world_score_female_avg.csv'
-M_AVG_CSV = '../../data/world_score_male_avg.csv'
-COUNTRY_AVG_CSV = '../../data/world_score_avg.csv'
+F_AVG_CSV = './data/world_score_female_avg.csv'
+M_AVG_CSV = './data/world_score_male_avg.csv'
+COUNTRY_AVG_CSV = './data/data/world_score_avg.csv'
 
 COUNTRY_DICT = make_country_dict()
 
