@@ -3,7 +3,6 @@ import pandas as pd
 import os
 from pisa_analysis_tool.visual.preprocessing import make_country_dict
 from pisa_analysis_tool.visual.preprocessing import add_lat_long
-from pisa_analysis_tool.visual.preprocessing import top_10_countries
 from pisa_analysis_tool.visual.preprocessing import remove_country
 from pisa_analysis_tool.visual.preprocessing import get_score
 from pisa_analysis_tool.visual.preprocessing import sort_by_country_avg
@@ -17,7 +16,7 @@ class UnitTests(unittest.TestCase):
     """
     SUBJECT_LST = ['Mathematics', 'Reading', 'Science']
     GEO_DATA = 'Copy of world_ogr.json'
-    LOCAL_DATA_PATH = '../data/'
+    LOCAL_DATA_PATH = './data/'
     WB_DATA = LOCAL_DATA_PATH + 'gender_coef.csv'
 
     male_path = LOCAL_DATA_PATH + 'world_score_male_avg.csv'
@@ -79,7 +78,6 @@ class UnitTests(unittest.TestCase):
         self.assertTrue(len(self.df_female) == 69)
         self.assertTrue(len(self.df_count) == 69)
 
-
     def test_make_country_dict(self):
         """
         Test the Country dict has stored the countries' name with
@@ -89,7 +87,6 @@ class UnitTests(unittest.TestCase):
         country_dict = make_country_dict()
         self.assertTrue('Algeria' in country_dict.keys())
         self.assertTrue(country_dict.get('Brazil') == (-10.772, -53.089))
-
 
     def test_add_lat_long(self):
         """
@@ -110,7 +107,7 @@ class UnitTests(unittest.TestCase):
                         f_avg_dict['lon'][-2] == -98.606)
 
         self.assertTrue(c_avg_dict['CountryName'][-3] == 'United Kingdom' and
-                        country_avg_dict['lat'][-3] == 53)
+                        c_avg_dict['lat'][-3] == 53)
 
         self.assertTrue(c_avg_dict['CountryName'][-3] == 'United Kingdom' and
                         c_avg_dict['lon'][-3] == -1.6)
@@ -122,16 +119,6 @@ class UnitTests(unittest.TestCase):
         df_wb = pd.read_csv(self.WB_DATA)
         self.assertTrue(len(df_wb) == 182)
         self.assertTrue(df_wb['indicator'].min() > 0)
-
-    def test_make_country_dict(self):
-        """
-        Test the Country dict has stored the countries' name with
-        correct latitude and longitude coordinate.
-        :return:
-        """
-        country_dict = make_country_dict()
-        self.assertTrue('Algeria' in country_dict.keys())
-        self.assertTrue(country_dict.get('Brazil') == (-10.772, -53.089))
 
     def test_remove_country(self):
         """

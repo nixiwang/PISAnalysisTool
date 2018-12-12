@@ -12,7 +12,6 @@ import numpy as np
 import wbdata
 
 
-
 FILE_DIR = '../data/student_info.csv'
 SUBJECT_LST = ['Mathematics', 'Reading', 'Science']
 GEO_DATA = '../data/world_ogr.json'
@@ -45,10 +44,13 @@ def preprocessing():
 
 def add_lat_long(filedir, country_dict):
     """
-    read a csv file and add countries' latitude and longitude data behind the last column.
+    read a csv file and add countries' latitude and longitude
+    data behind the last column.
     :param filedir: directory of csv file
-    :param country_dict: a dictionary which keys are country names and values are [lat, lon]
-    :return: new csv file and a list of countries which have PISA test score
+    :param country_dict: a dictionary which keys are country
+                         names and values are [lat, lon]
+    :return: new csv file and a list of countries which have PISA
+             test score
     """
     new_file = dict()
     new_file['CountryName'] = []
@@ -122,9 +124,11 @@ def make_country_dict():
 
 def remove_country(csv_dir, country_dict, country_lst):
     """
-    extract the countries which have gender parity index and also in world country data
+    extract the countries which have gender parity index
+    and also in world country data
     :param csv_dir: a csv file which have gender coefficent.
-    :param country_dict: a dictionary which keys are country name and value are (lat, lon)
+    :param country_dict: a dictionary which keys are country
+                         name and value are (lat, lon)
     :param country_lst: a list of countries which have PISA test score
     :return: a dictionary with country name and gender parity index
     """
@@ -159,6 +163,7 @@ def get_score(df_male, df_female, subject):
     male_res = df_male_new.to_dict('records')
     female_res = df_female_new.to_dict('records')
     return male_res, female_res
+
 
 def sort_by_country_avg(df_count, subject, m_res, f_res):
     """
