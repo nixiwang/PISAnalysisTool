@@ -177,7 +177,7 @@ def sort_by_country_avg(df_count, subject, m_res, f_res):
     """
     df_ctry_subj = df_count[['CountryName', subject]]
     df_ctry_subj_avg_s = df_ctry_subj.sort_values(df_ctry_subj.columns[-1],
-                                                       ascending=False)
+                                                  ascending=False)
     ctry_subj_avg_lst = df_ctry_subj_avg_s.to_dict('split')['data']
     lst_25 = []
     lst_25_male = []
