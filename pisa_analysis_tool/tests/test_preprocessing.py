@@ -20,12 +20,14 @@ class UnitTests(unittest.TestCase):
     """
     This class is to run all the tests based on preprocessing.
     """
-    LOCAL_DATA_PATH = '../data/visual_data/'
-    WB_DATA = LOCAL_DATA_PATH + 'gender_coef.csv'
-
-    male_path = LOCAL_DATA_PATH + 'world_score_male_avg.csv'
-    female_path = LOCAL_DATA_PATH + 'world_score_female_avg.csv'
-    count_path = LOCAL_DATA_PATH + 'world_score_avg.csv'
+    WB_DATA = os.path.join(THIS_DIR, os.pardir,
+                           'data/visual_data/gender_coef.csv')
+    male_path = os.path.join(THIS_DIR, os.pardir,
+                             'data/visual_data/world_score_male_avg.csv')
+    female_path = os.path.join(THIS_DIR, os.pardir,
+                               'data/visual_data/world_score_female_avg.csv')
+    count_path = os.path.join(THIS_DIR, os.pardir,
+                              'data/visual_data/world_score_avg.csv')
 
     df_male = pd.read_csv(male_path)
     df_female = pd.read_csv(female_path)
@@ -41,18 +43,6 @@ class UnitTests(unittest.TestCase):
         female_avg_dict, _ = add_lat_long(self.female_path, country_dict)
         country_avg_dict, _ = add_lat_long(self.count_path, country_dict)
         return male_avg_dict, female_avg_dict, country_avg_dict
-
-    def test_preprocessing(self):
-        """
-        Test whether the program has save the files.
-        """
-        self.assertTrue(os.path.exists(self.LOCAL_DATA_PATH))
-        self.assertTrue(os.path.exists(self.LOCAL_DATA_PATH +
-                                       'world_score_male_avg.csv'))
-        self.assertTrue(os.path.exists(self.LOCAL_DATA_PATH +
-                                       'world_score_female_avg.csv'))
-        self.assertTrue(os.path.exists(self.LOCAL_DATA_PATH +
-                                       'world_score_avg.csv'))
 
     def test_dataframe(self):
         """
