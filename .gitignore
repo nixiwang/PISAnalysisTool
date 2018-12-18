@@ -128,3 +128,6 @@ venv.bak/
 
 .idea
 
+_build
+_static
+_templates

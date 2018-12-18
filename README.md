@@ -209,7 +209,7 @@ import the package on your computer.
 
 
 ## Examples (How to use PISAnalysisTool)
-To understand how to use Ax/Wx, please refer to 
+To understand how to use PISAnalysisTool, please refer to 
 the [examples](https://github.com/nixiwang/PISAnalysisTool/tree/master/Examples
 ) section of this GitHub page where you can find 
 examples for doing the following:
@@ -224,7 +224,7 @@ csv data file for PISA data, including a demo on interactive PISA data generatio
 - Creating visualizations with the merged dataset on this example
 
 ## User cases
-More specific user cases can be found in [function specifications doc.](https://github.com/nixiwang/PISAnalysisTool/blob/master/doc/Function%20Specification.md)
+More specific user cases can be found in [function specifications doc.](https://github.com/nixiwang/PISAnalysisTool/blob/master/doc/Updated%20function%20specification/Function%20specification.md)
 
 ## Visualization
 Figure 1: PISA Score World Distribution
