@@ -41,18 +41,16 @@
 </div>
 <div class="section" id="module-pisa_analysis_tool.correlation">
 <span id="pisa-analysis-tool-correlation-module"></span><h2>pisa_analysis_tool.correlation module<a class="headerlink" href="#module-pisa_analysis_tool.correlation" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="cse583-project">
-<h3>CSE583 Project<a class="headerlink" href="#cse583-project" title="Permalink to this headline">¶</a></h3>
-</div>
 <div class="section" id="running-descriptive-visuals">
 <h3>Running descriptive visuals<a class="headerlink" href="#running-descriptive-visuals" title="Permalink to this headline">¶</a></h3>
-<p>The following module offers visualization for descriptive statstics such as
-correlation, scatter plot,
+<p>The following module offers visualization for descriptive statistics such as
+correlation plot, scatter plot,
 density plot, and histograms.</p>
 <dl class="function">
 <dt id="pisa_analysis_tool.correlation.calculate_correlation">
 <code class="descclassname">pisa_analysis_tool.correlation.</code><code class="descname">calculate_correlation</code><span class="sig-paren">(</span><em>df</em>, <em>colnames</em><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.correlation.calculate_correlation" title="Permalink to this definition">¶</a></dt>
-<dd><p>A general function to calculate correlations between selected variables</p>
+<dd><p>A general function to calculate and visualize correlations
+between selected variables</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -61,9 +59,17 @@ density plot, and histograms.</p>
 </tr>
 </tbody>
 </table>
-<p>science, math, reading, and other five selected variables as predictors.
-:param colnames: a list of focal variables
-:return: a plot of correlations</p>
+<p>science, math, reading, and other five selected variables as predictors.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>colnames</strong> – a list of focal variables</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a plot of correlations</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
@@ -113,9 +119,6 @@ science, math, reading, and other five selected variables as predictors.
 </div>
 <div class="section" id="module-pisa_analysis_tool.data_cleaning">
 <span id="pisa-analysis-tool-data-cleaning-module"></span><h2>pisa_analysis_tool.data_cleaning module<a class="headerlink" href="#module-pisa_analysis_tool.data_cleaning" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id1">
-<h3>CSE583 Project<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-</div>
 <div class="section" id="cleaning-data">
 <h3>Cleaning data<a class="headerlink" href="#cleaning-data" title="Permalink to this headline">¶</a></h3>
 <p>The following module demonstrates data cleaning procedures such as recoding,
@@ -184,9 +187,6 @@ recoded as 1 and -1 respectively.</p>
 </div>
 <div class="section" id="module-pisa_analysis_tool.get_WDI_data">
 <span id="pisa-analysis-tool-get-wdi-data-module"></span><h2>pisa_analysis_tool.get_WDI_data module<a class="headerlink" href="#module-pisa_analysis_tool.get_WDI_data" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id2">
-<h3>CSE583 Project<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-</div>
 <div class="section" id="getting-world-bank-data-from-wbdata-pakcage">
 <h3>Getting World Bank data from wbdata pakcage<a class="headerlink" href="#getting-world-bank-data-from-wbdata-pakcage" title="Permalink to this headline">¶</a></h3>
 <p>This module searches the indicators in the World Bank data and get a dataframe
@@ -245,26 +245,38 @@ accordingly.</p>
 
 </div>
 </div>
-<div class="section" id="pisa-analysis-tool-get-students-info-module">
-<h2>pisa_analysis_tool.get_students_info module<a class="headerlink" href="#pisa-analysis-tool-get-students-info-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-pisa_analysis_tool.get_students_info">
+<span id="pisa-analysis-tool-get-students-info-module"></span><h2>pisa_analysis_tool.get_students_info module<a class="headerlink" href="#module-pisa_analysis_tool.get_students_info" title="Permalink to this headline">¶</a></h2>
+<p>CSE583 Project
+Given a student file, extracts useful features and writes
+as a csv file</p>
+<dl class="function">
+<dt id="pisa_analysis_tool.get_students_info.get_student_info">
+<code class="descclassname">pisa_analysis_tool.get_students_info.</code><code class="descname">get_student_info</code><span class="sig-paren">(</span><em>input_file</em><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.get_students_info.get_student_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes a list of interested attributes, computes and extracts
+useful data from student-school datafile, stores data into a
+new csv file.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pisa_analysis_tool.get_students_info.main">
+<code class="descclassname">pisa_analysis_tool.get_students_info.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.get_students_info.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracts student infomation and generates a output csv file</p>
+</dd></dl>
+
 </div>
 <div class="section" id="module-pisa_analysis_tool.hlm_pymer4">
 <span id="pisa-analysis-tool-hlm-pymer4-module"></span><h2>pisa_analysis_tool.hlm_pymer4 module<a class="headerlink" href="#module-pisa_analysis_tool.hlm_pymer4" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id3">
-<h3>CSE583 Project<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-</div>
 <div class="section" id="fitting-and-plotting-multi-level-models">
 <h3>Fitting and plotting multi-level models<a class="headerlink" href="#fitting-and-plotting-multi-level-models" title="Permalink to this headline">¶</a></h3>
 <p>This module runs models through pymer4 package for the examplar inquiry,
 which is to investigate the school-level and country-level factors that predict
-students’ science
-performance in the PISA 2015 dataset, and mediate gender differences in science
-performance.
+students’ science performance in the PISA 2015 data set, and mediate
+gender differences in science performance.
 Here each model category is exemplified with a selection of variables
 and we will show a demonstration of model fitting with regard to
 gender (female) and a group of other interested factors. The results show the
-model
-coefficients for each model.</p>
+model coefficients for each model.</p>
 <dl class="function">
 <dt id="pisa_analysis_tool.hlm_pymer4.fixed_effect_3level_model">
 <code class="descclassname">pisa_analysis_tool.hlm_pymer4.</code><code class="descname">fixed_effect_3level_model</code><span class="sig-paren">(</span><em>dataframe</em><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.hlm_pymer4.fixed_effect_3level_model" title="Permalink to this definition">¶</a></dt>
@@ -454,8 +466,21 @@ and generates a new output csv file</p>
 </dd></dl>
 
 </div>
-<div class="section" id="pisa-analysis-tool-plot-wdi-module">
-<h2>pisa_analysis_tool.plot_WDI module<a class="headerlink" href="#pisa-analysis-tool-plot-wdi-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-pisa_analysis_tool.plot_WDI">
+<span id="pisa-analysis-tool-plot-wdi-module"></span><h2>pisa_analysis_tool.plot_WDI module<a class="headerlink" href="#module-pisa_analysis_tool.plot_WDI" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pisa_analysis_tool.plot_WDI.plot_indicators">
+<code class="descclassname">pisa_analysis_tool.plot_WDI.</code><code class="descname">plot_indicators</code><span class="sig-paren">(</span><em>country_list</em>, <em>indicator</em>, <em>start=2000</em>, <em>end=2015</em><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.plot_WDI.plot_indicators" title="Permalink to this definition">¶</a></dt>
+<dd><p>A grand function that takes as input a list of country codes, then uses
+our function above WB_country_data to get a list of indicators for each
+country,then plot a line diagram.
+:param country_list: a list of strings of country code
+:param indicator: indicator index from wbdata
+:param start: start of the year
+:param end: end of the year
+:return: a plot</p>
+</dd></dl>
+
 </div>
 <div class="section" id="module-pisa_analysis_tool.students_info_helper">
 <span id="pisa-analysis-tool-students-info-helper-module"></span><h2>pisa_analysis_tool.students_info_helper module<a class="headerlink" href="#module-pisa_analysis_tool.students_info_helper" title="Permalink to this headline">¶</a></h2>
