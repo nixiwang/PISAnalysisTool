@@ -1,11 +1,10 @@
 """
-CSE583 Project
 Processing map data
 """
 
 import pandas as pd
 import folium
-from preprocessing import make_country_dict, add_lat_long, remove_country
+from pisa_analysis_tool.preprocessing import make_country_dict, add_lat_long, remove_country
 
 
 # json file with countries' name and their geographical data

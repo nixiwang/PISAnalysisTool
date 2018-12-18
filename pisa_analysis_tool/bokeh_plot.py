@@ -1,6 +1,5 @@
 """
 Created on Sat Dec 7 22:57:07 2018
-@author: Shenghao Xie
 This file will plot an interactive visualization interface.
 """
 from bokeh.plotting import figure
@@ -10,7 +9,7 @@ from bokeh.io import show
 from bokeh.models import Panel
 from bokeh.layouts import gridplot
 from bokeh.models.widgets import Tabs
-from preprocessing import make_country_dict, add_lat_long, np, pd
+from pisa_analysis_tool.preprocessing import make_country_dict, add_lat_long, np, pd
 
 F_AVG_CSV = './data/world_score_female_avg.csv'
 M_AVG_CSV = './data/world_score_male_avg.csv'

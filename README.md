@@ -167,7 +167,7 @@ In the current package, it linked different sub-datasets in PISA: student, schoo
 The next step is to identify and visualize countries that have “equitable” schooling outcomes and their characteristics in education systems, including student and school culture, teacher educational practices, and societal factors. That said, we caution against simplistic international comparisons of country performances using correlates of higher performance in higher ranking countries for projecting causal generalizations and statements. 
 
 ## Documentation
-Current documentation for the PISAnalysisTool project can be found at <https://pypi.org/project/PISAnalysisTool/>
+Current documentation for the PISAnalysisTool project can be found at <https://readthedocs.org/projects/pisanalysistool/>
 
 ## Installation
 `PISAnalysisTool` for its first version 0.1.0 is only compatible with Python 3. The installation steps are as below:
