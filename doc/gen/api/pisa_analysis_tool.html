@@ -117,6 +117,102 @@ science, math, reading, and other five selected variables as predictors.
 
 </div>
 </div>
+<div class="section" id="pisa-analysis-tool-preprocessing-module">
+<h2>pisa_analysis_tool.preprocessing module<a class="headerlink" href="#pisa-analysis-tool-preprocessing-module" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-pisa_analysis_tool.preprocessing"></span><dl class="function">
+<dt id="pisa_analysis_tool.preprocessing.add_lat_long">
+<code class="descclassname">pisa_analysis_tool.preprocessing.</code><code class="descname">add_lat_long</code><span class="sig-paren">(</span><em>filedir</em>, <em>country_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.preprocessing.add_lat_long" title="Permalink to this definition">¶</a></dt>
+<dd><p>read a csv file and add countries’ latitude and longitude
+data behind the last column.
+:param filedir: directory of csv file
+:param country_dict: a dictionary which keys are country names</p>
+<blockquote>
+<div>and values are [lat, lon]</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">new csv file and a list of countries which
+have PISA test score</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pisa_analysis_tool.preprocessing.get_score">
+<code class="descclassname">pisa_analysis_tool.preprocessing.</code><code class="descname">get_score</code><span class="sig-paren">(</span><em>df_male</em>, <em>df_female</em>, <em>subject</em><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.preprocessing.get_score" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a country’s male and female score with respect to a subject.
+:param df_male: a data frame with males average score
+:param df_female: a data frame with females average score
+:param subject: subject name
+:return: two dictionaries</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pisa_analysis_tool.preprocessing.make_country_dict">
+<code class="descclassname">pisa_analysis_tool.preprocessing.</code><code class="descname">make_country_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.preprocessing.make_country_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>extract country name with lat and lon into a dictionary
+:return: a dictionary which keys are country name and value are (lat, lon)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pisa_analysis_tool.preprocessing.preprocessing">
+<code class="descclassname">pisa_analysis_tool.preprocessing.</code><code class="descname">preprocessing</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.preprocessing.preprocessing" title="Permalink to this definition">¶</a></dt>
+<dd><p>read original student_info data and convert them into 3 new csv file
+world_score_avg.csv: store countries’ average subject score
+world_score_male_avg.csv: store countries’ male average subject score
+world_score_female_avg.csv: store countries’ female average subject score
+:return: none</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pisa_analysis_tool.preprocessing.remove_country">
+<code class="descclassname">pisa_analysis_tool.preprocessing.</code><code class="descname">remove_country</code><span class="sig-paren">(</span><em>csv_dir</em>, <em>country_dict</em>, <em>country_lst</em><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.preprocessing.remove_country" title="Permalink to this definition">¶</a></dt>
+<dd><p>extract the countries which have gender parity index and also
+in world country data
+:param csv_dir: a csv file which have gender coefficent.
+:param country_dict: a dictionary which keys are country name</p>
+<blockquote>
+<div>and value are (lat, lon)</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>country_lst</strong> – a list of countries which have PISA test score</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a dictionary with country name and gender parity index</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pisa_analysis_tool.preprocessing.sort_by_country_avg">
+<code class="descclassname">pisa_analysis_tool.preprocessing.</code><code class="descname">sort_by_country_avg</code><span class="sig-paren">(</span><em>df_count</em>, <em>subject</em>, <em>m_res</em>, <em>f_res</em><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.preprocessing.sort_by_country_avg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sort the countries with subject score from high to low.
+Filter the scores into 4 bins, calculate each bin’s
+gender coefficient. We also filter male and female mean
+score for each country into 4 bins, and get the average
+for each bin.
+:param df_count: average score for each country
+:param subject: subject name
+:param m_res: average score for male student in each country
+:param f_res: average score for female student in each country
+:return: 3 dictionaries</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pisa_analysis_tool.preprocessing.wb_country_data">
+<code class="descclassname">pisa_analysis_tool.preprocessing.</code><code class="descname">wb_country_data</code><span class="sig-paren">(</span><em>indicator</em>, <em>start=2015</em>, <em>end=2015</em><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.preprocessing.wb_country_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>grab gender parity index data from world bank api
+:param indicator:
+:param start: start year
+:param end: end year
+:return: a dataframe</p>
+</dd></dl>
+
+</div>
 <div class="section" id="module-pisa_analysis_tool.data_cleaning">
 <span id="pisa-analysis-tool-data-cleaning-module"></span><h2>pisa_analysis_tool.data_cleaning module<a class="headerlink" href="#module-pisa_analysis_tool.data_cleaning" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="cleaning-data">
@@ -182,8 +278,24 @@ recoded as 1 and -1 respectively.</p>
 
 </div>
 </div>
-<div class="section" id="pisa-analysis-tool-fomular-creator-module">
-<h2>pisa_analysis_tool.fomular_creator module<a class="headerlink" href="#pisa-analysis-tool-fomular-creator-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-pisa_analysis_tool.formula_creator">
+<span id="pisa-analysis-tool-formula-creator-module"></span><h2>pisa_analysis_tool.formula_creator module<a class="headerlink" href="#module-pisa_analysis_tool.formula_creator" title="Permalink to this headline">¶</a></h2>
+<p>Tool for generating formulas
+Given user’s input for lmer, creates a formula and
+its name</p>
+<dl class="function">
+<dt id="pisa_analysis_tool.formula_creator.formula_creator">
+<code class="descclassname">pisa_analysis_tool.formula_creator.</code><code class="descname">formula_creator</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.formula_creator.formula_creator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a formula based on user’s input for Lmer,
+and a name describing the formula.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pisa_analysis_tool.formula_creator.main">
+<code class="descclassname">pisa_analysis_tool.formula_creator.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pisa_analysis_tool.formula_creator.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates the formula specified by the user</p>
+</dd></dl>
+
 </div>
 <div class="section" id="module-pisa_analysis_tool.get_WDI_data">
 <span id="pisa-analysis-tool-get-wdi-data-module"></span><h2>pisa_analysis_tool.get_WDI_data module<a class="headerlink" href="#module-pisa_analysis_tool.get_WDI_data" title="Permalink to this headline">¶</a></h2>

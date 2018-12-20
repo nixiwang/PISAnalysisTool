@@ -20,6 +20,14 @@ pisa\_analysis\_tool.correlation module
     :undoc-members:
     :show-inheritance:
 
+pisa\_analysis\_tool.preprocessing module
+---------------------------------------
+
+.. automodule:: pisa_analysis_tool.preprocessing
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 pisa\_analysis\_tool.data\_cleaning module
 ------------------------------------------
 
@@ -88,14 +96,6 @@ pisa\_analysis\_tool.students\_info\_helper module
 --------------------------------------------------
 
 .. automodule:: pisa_analysis_tool.students_info_helper
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-pisa\_analysis\_tool.preprocessing
---------------------------------------------------
-
-.. automodule:: pisa_analysis_tool.preprocessing
     :members:
     :undoc-members:
     :show-inheritance:

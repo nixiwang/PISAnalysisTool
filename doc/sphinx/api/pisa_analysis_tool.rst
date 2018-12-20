@@ -20,6 +20,14 @@ pisa\_analysis\_tool.correlation module
     :undoc-members:
     :show-inheritance:
 
+pisa\_analysis\_tool.preprocessing module
+---------------------------------------
+
+.. automodule:: pisa_analysis_tool.preprocessing
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 pisa\_analysis\_tool.data\_cleaning module
 ------------------------------------------
 
@@ -28,10 +36,10 @@ pisa\_analysis\_tool.data\_cleaning module
     :undoc-members:
     :show-inheritance:
 
-pisa\_analysis\_tool.fomular\_creator module
+pisa\_analysis\_tool.formula\_creator module
 --------------------------------------------
 
-.. automodule:: pisa_analysis_tool.fomular_creator
+.. automodule:: pisa_analysis_tool.formula_creator
     :members:
     :undoc-members:
     :show-inheritance:

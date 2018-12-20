@@ -5,7 +5,6 @@
 
 Welcome to PISAnalysisTool's documentation!
 ===========================================
-
 Analyzing PISA and World Bank Educational Data
 ----------------------------------------------
 Background
@@ -99,6 +98,7 @@ by passing the model paramter, which can be get using our formula generator tool
 The package also does not support ad hoc interactive visualization nor longitudinal analysis but can create an analysis
 report for gender differences on students' performance for a given time frame.
 
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
@@ -106,7 +106,6 @@ report for gender differences on students' performance for a given time frame.
 .. automodule:: pisa_analysis_tool
    :members:
    :undoc-members:
-
 
 Indices and tables
 ==================
