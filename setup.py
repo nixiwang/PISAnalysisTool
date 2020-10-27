@@ -24,7 +24,7 @@ setup(
       "chardet==3.0.4",
       "conda==4.5.11",
       "constantly==15.1.0",
-      "cryptography==2.3.1",
+      "cryptography==3.2",
       "cycler==0.10.0",
       "decorator==4.3.0",
       "entrypoints==0.2.3",
