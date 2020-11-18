@@ -56,7 +56,7 @@ setup(
       "mkl-random==1.0.1",
       "nbconvert==5.3.1",
       "nbformat==4.4.0",
-      "notebook==5.7.0",
+      "notebook==6.1.5",
       "numpy==1.15.2",
       "pandas==0.23.4",
       "pandocfilters==1.4.2",
