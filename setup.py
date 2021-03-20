@@ -39,7 +39,7 @@ setup(
       "ipywidgets==7.4.2",
       "isort==4.3.4",
       "jedi==0.13.1",
-      "Jinja2==2.10",
+      "Jinja2==2.11.3",
       "joblib==0.13.0",
       "jsonschema==2.6.0",
       "jupyter==1.0.0",
