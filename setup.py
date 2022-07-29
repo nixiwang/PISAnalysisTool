@@ -51,7 +51,7 @@ setup(
       "MarkupSafe==1.0",
       "matplotlib==3.0.0",
       "mccabe==0.6.1",
-      "mistune==0.8.3",
+      "mistune==2.0.3",
       "mkl-fft==1.0.6",
       "mkl-random==1.0.1",
       "nbconvert==5.3.1",
